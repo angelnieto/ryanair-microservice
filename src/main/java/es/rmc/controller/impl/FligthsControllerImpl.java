@@ -18,7 +18,7 @@ public class FligthsControllerImpl implements FlightsController{
 		return  new ResponseEntity<String>("Interconnections method", HttpStatus.OK);
 	}
 
-	@GetMapping()
+	@GetMapping(params = {"departure", "arrival"})
 	public ResponseEntity<String> getInterconnections(@RequestParam(required = true) String departure, @RequestParam(required = true) String arrival) {
 		
 		return new ResponseEntity<String>("Interconnections method with parameters", HttpStatus.OK);
