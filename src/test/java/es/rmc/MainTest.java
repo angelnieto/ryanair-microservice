@@ -17,10 +17,10 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = App.class)
+@SpringBootTest(classes = Main.class)
 @TestPropertySource(locations="classpath:test.properties")
 @AutoConfigureMockMvc
-public class AppTest {
+public class MainTest {
 
     @Autowired
     private MockMvc mvc;
