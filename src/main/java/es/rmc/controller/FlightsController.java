@@ -11,5 +11,5 @@ public interface FlightsController {
 
 	public ResponseEntity<String> getInterconnections();
 	
-	public ResponseEntity<String> getInterconnections(String departure, String arrival);
+	public ResponseEntity<String> getInterconnections(String departure,String departureDatetime , String arrival, String arrivalDatetime);
 }

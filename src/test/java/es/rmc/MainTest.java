@@ -3,6 +3,11 @@ package es.rmc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,20 +36,28 @@ public class MainTest {
     @Value("${server.servlet.resource-path}")
     private String resourcePath;
     
-    @Value("${departure.iata}")
-    private String departure;
+    @Value("${departure1.iata}")
+    private String departure1;
     
-    @Value("${arrival.iata}")
-    private String arrival;
+    @Value("${departure1.datetime1}")
+    private String departure1Datetime;
     
-    private static String DEPARTURE = "departure", ARRIVAL = "arrival"; 
+    @Value("${arrival1.iata}")
+    private String arrival1;
+    
+    @Value("${arrival1.datetime1}")
+    private String arrival1Datetime;
+    
+    private static final String DEPARTURE = "departure", ARRIVAL = "arrival", DEPARTURE_DATETIME = "departureDatetime", ARRIVAL_DATETIME = "arrivalDatetime" ; 
 
     @Test
-    public void helloGradle() throws Exception {
+    public void getInterconnectionsForDate1() throws Exception {
     	
     	MultiValueMap<String, String> requestParams = new LinkedMultiValueMap<String, String>();
-    	requestParams.add(DEPARTURE, departure);
-    	requestParams.add(ARRIVAL, arrival);
+    	requestParams.add(DEPARTURE, departure1);
+    	requestParams.add(ARRIVAL, arrival1);
+    	requestParams.add(DEPARTURE, departure1);
+    	requestParams.add(ARRIVAL, arrival1);
     	
        	MvcResult result =  mvc.perform(get(resourcePath).params(requestParams))
        			.andExpect(status().isOk()).andReturn();
