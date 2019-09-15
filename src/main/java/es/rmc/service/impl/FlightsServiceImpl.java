@@ -2,6 +2,7 @@ package es.rmc.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -21,6 +22,9 @@ public class FlightsServiceImpl implements FlightsService {
 	 @Value("${url.routes}")
 	 private String routesEndpoint;
 	 
+	 @Autowired 
+	 RestTemplate restTemplate;
+	 
 	 private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
 	
 	@Override
@@ -37,8 +41,6 @@ public class FlightsServiceImpl implements FlightsService {
         HttpHeaders requestHeaders = new HttpHeaders();
         requestHeaders.add("Accept", MediaType.APPLICATION_JSON_VALUE); 
 		
-		RestTemplate restTemplate = new RestTemplate();
-		  
 		//request entity is created with request headers
 	    HttpEntity<HttpHeaders> requestEntity = new HttpEntity<>(requestHeaders);
 
