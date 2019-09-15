@@ -1,0 +1,5782 @@
+[
+	{
+		"airportFrom": "MAD",
+		"airportTo": "ACE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"FUE",
+			"IBZ",
+			"LPA",
+			"MLA",
+			"PMI",
+			"PSA",
+			"TFN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "ATH",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "ATH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BGY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BUD",
+			"BVA",
+			"CRL",
+			"KRK",
+			"OTP",
+			"PSA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BHX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BLQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"CIA",
+			"CRL",
+			"KRK",
+			"PSA",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BRI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BRU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BTS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"CRL",
+			"KRK",
+			"STN",
+			"VNO",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BUD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"CPH",
+			"CRL",
+			"KRK",
+			"OTP",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "BVA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CRL",
+			"DUB",
+			"MRS",
+			"RAK"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CAG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CGN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"CRL",
+			"HAM",
+			"OTP",
+			"SXF",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CIA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"BVA",
+			"PSA",
+			"SCQ",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CIY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CPH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CGN",
+			"CRL",
+			"OTP",
+			"SXF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CRL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"BVA",
+			"MRS",
+			"SXF",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "CTA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BVA",
+			"CIA",
+			"KRK",
+			"MRS",
+			"PSA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"BVA",
+			"KRK",
+			"MAN",
+			"OTP",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CGN",
+			"CRL",
+			"OTP",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "FEZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"KRK",
+			"MRS",
+			"PSA",
+			"RAK",
+			"RBA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "FRA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "FUE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"IBZ",
+			"LPA",
+			"MLA",
+			"OPO",
+			"PMI",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "GLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "HAM",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BTS",
+			"CGN",
+			"CPH",
+			"KRK",
+			"SXF",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "IBZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"LPA",
+			"MLA",
+			"PMI",
+			"PSA",
+			"TFN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "KBP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "KRK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BTS",
+			"BUD",
+			"MAN",
+			"OTP",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "LIS",
+		"connectingAirport": "OPO",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "LPA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"MLA",
+			"PMI",
+			"PSA",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "LPL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "LUX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "MAH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "MAN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"DUB",
+			"KRK",
+			"OTP",
+			"RAK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "MLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"LPA",
+			"PMI",
+			"PSA",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "MRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BVA",
+			"CRL",
+			"OTP",
+			"RAK",
+			"RBA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "MXP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "NAP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "NCL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "NUE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "OPO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"LPA",
+			"PMI",
+			"PSA",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "OTP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CGN",
+			"KRK",
+			"MAN",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "OZZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "PMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"LPA",
+			"MLA",
+			"PSA",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "PMO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "POZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "PRG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "PSA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CIA",
+			"CRL",
+			"KRK",
+			"OTP"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "PSR",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "RAK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"DUB",
+			"MAN",
+			"MRS",
+			"RBA",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "RBA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CGN",
+			"CIA",
+			"CRL",
+			"MRS",
+			"RAK",
+			"SCQ",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "SCQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"BUD",
+			"BVA",
+			"CGN",
+			"CIA",
+			"DUB",
+			"STN",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "SOF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "STN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BUD",
+			"CIA",
+			"DUB",
+			"MAN",
+			"RAK",
+			"SCQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "SUF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "SXF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"CGN",
+			"CPH",
+			"CRL",
+			"HAM",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "TFN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"LPA",
+			"MLA",
+			"OPO",
+			"PMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "TFS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"FUE",
+			"IBZ",
+			"LPA",
+			"MLA",
+			"OPO",
+			"PMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "TLS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "TNG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CGN",
+			"CRL",
+			"HAM",
+			"MRS",
+			"OTP",
+			"RAK",
+			"RBA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "TPS",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "VIE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "VNO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BTS",
+			"CIA",
+			"DUB",
+			"RAK",
+			"STN",
+			"SXF",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "VRN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "WMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BUD",
+			"CRL",
+			"KRK",
+			"OTP",
+			"VNO"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAD",
+		"airportTo": "WRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAH",
+		"airportTo": "BCN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAH",
+		"airportTo": "EMA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAH",
+		"airportTo": "MAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAH",
+		"airportTo": "VLC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "ACE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+			"AGP",
+			"ALC",
+			"FAO",
+			"LPA",
+			"MLA",
+			"PMI",
+			"VLC"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "AGA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "AGP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ALC",
+			"FAO",
+			"LPA",
+			"MLA",
+			"PMI",
+			"TFS",
+			"VLC"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "ALC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"AGP",
+			"FAO",
+			"LPA",
+			"MLA",
+			"PMI",
+			"TFS",
+			"VLC"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "ATH",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BCN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"CIA",
+			"CRL",
+			"DUB",
+			"LIS",
+			"MAD"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BDS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BFS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BGY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BVA",
+			"CIA",
+			"CRL",
+			"DUB",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BLL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BLQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BOD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BRI",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BTS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BUD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BGY",
+			"CIA",
+			"CRL",
+			"DUB",
+			"KRK",
+			"LIS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "BZR",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CAG",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CAG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CCF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CFU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CGN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CHQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CIA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BGY",
+			"BUD",
+			"DUB",
+			"MAD",
+			"RIX",
+			"RYG"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "CRL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BGY",
+			"BVA",
+			"DUB",
+			"KRK",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "UKP",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BGY",
+			"BUD",
+			"CIA",
+			"CRL",
+			"LIS",
+			"MAD"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CIA",
+			"CRL",
+			"KRK",
+			"RIX",
+			"RYG",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "FAO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"AGP",
+			"ALC",
+			"MLA",
+			"PMI",
+			"TFS",
+			"VLC"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "FRA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "FUE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+			"AGP",
+			"ALC",
+			"FAO",
+			"LPA",
+			"MLA",
+			"PMI",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "GDN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"CIA",
+			"KRK",
+			"RIX",
+			"RYG",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "GOT",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "GRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "HAM",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "IBZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "KBP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "KRK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"BVA",
+			"CRL",
+			"DUB",
+			"RYG",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "KTW",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "LEI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "LIG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "LIS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BCN",
+			"BUD",
+			"BVA",
+			"CRL",
+			"DUB",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "LPA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"AGP",
+			"FAO",
+			"FUE",
+			"MLA",
+			"PMI",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "MAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"CIA",
+			"CRL",
+			"DUB",
+			"LIS",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "MJV",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"CIA",
+			"CRL",
+			"DUB",
+			"KRK",
+			"MAD"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "MLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"AGP",
+			"ALC",
+			"FAO",
+			"PMI",
+			"TFS",
+			"VLC"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "MRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "MXP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "NAP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "NTE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "NUE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "OPO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PDL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PIS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"AGP",
+			"ALC",
+			"FAO",
+			"FUE",
+			"LPA",
+			"MLA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PMO",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PMO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PRG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "PSR",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RAK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "REU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RHO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RIX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BUD",
+			"CIA",
+			"CRL",
+			"KRK",
+			"LIS",
+			"RYG",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RMU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RYG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BVA",
+			"CIA",
+			"CRL",
+			"KRK",
+			"RIX",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "RZE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CIA",
+			"CRL",
+			"DUB",
+			"KRK",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "SKG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "SNN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "UKP",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CIA",
+			"DUB",
+			"KRK",
+			"LIS",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "STR",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BUD",
+			"CIA",
+			"CRL",
+			"DUB",
+			"MAD",
+			"WMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "SUF",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "SVQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "SXF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "TFS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+			"AGP",
+			"ALC",
+			"FAO",
+			"FUE",
+			"LPA",
+			"MLA",
+			"PMI"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "TRF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "TSF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "VLC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ACE",
+			"AGP",
+			"ALC",
+			"BCN",
+			"FAO",
+			"PMI",
+			"TFS"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "WMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CRL",
+			"KRK",
+			"LIS",
+			"MAD",
+			"RIX",
+			"RYG"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "WRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MAN",
+		"airportTo": "ZAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "BHX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"DUB",
+			"MAN",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "BOH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"MAN",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"MAN",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "EMA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"MAN",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "FRA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "LBA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "LTN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"MAN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "MAN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "PIK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MJV",
+		"airportTo": "STN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"MAN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "ABZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "AGP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "ALC",
+		"connectingAirport": "CRL",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "AMM",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "AMS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "ATH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CGN",
+			"CIA",
+			"GRO",
+			"MAN",
+			"STN",
+			"SXF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BCN",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BCN",
+		"connectingAirport": "FCO",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BCN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BFS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BGY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BRI",
+			"CIA",
+			"PSA",
+			"STN",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BHX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"DUB",
+			"EDI",
+			"LPL",
+			"MAN",
+			"PIK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BLL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BLQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BRI",
+			"CIA",
+			"MAN",
+			"PSA",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BOH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"EDI",
+			"LPL",
+			"MAD",
+			"PIK",
+			"TRN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BRI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"CIA",
+			"MAN",
+			"PSA",
+			"SXF",
+			"TRN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BHX",
+			"DUB",
+			"EDI",
+			"LPL",
+			"MAN",
+			"PIK"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BTS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BUD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "BVA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CAG",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CAG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CGN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ATH",
+			"BRI",
+			"CIA",
+			"DUB",
+			"MAN",
+			"STN",
+			"SXF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CIA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"GRO",
+			"KRK",
+			"MAD",
+			"PSA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CIY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CIY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CMN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CRL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CTA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "CWL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"CIA",
+			"EDI",
+			"KRK",
+			"LPL",
+			"MAN",
+			"PIK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "DUS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "EDI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BHX",
+			"DUB",
+			"KRK",
+			"LPL",
+			"MAD",
+			"PIK"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BRI",
+			"CIA",
+			"DUB",
+			"GRO",
+			"NYO",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "EMA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"EDI",
+			"KRK",
+			"LPL",
+			"PIK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "EXT",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "FCO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "FKB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"CGN",
+			"CIA",
+			"MAN",
+			"PIK",
+			"PSA",
+			"STN",
+			"SXF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "FRA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "GDN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"CGN",
+			"CIA",
+			"KRK",
+			"MAN",
+			"PIK",
+			"STN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "GOT",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "GRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"CIA",
+			"KRK",
+			"MAD",
+			"PSA",
+			"SXF",
+			"TRN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "GSE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "GVA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "INI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "KBP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "KRK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BRI",
+			"CIA",
+			"DUB",
+			"LPL",
+			"MAN",
+			"PSA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LBA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"DUB",
+			"EDI",
+			"KRK",
+			"LPL",
+			"MAN",
+			"PIK"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LDE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LED",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LIS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LPL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BHX",
+			"DUB",
+			"EDI",
+			"KRK",
+			"MAN",
+			"PIK"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LTN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"DUB",
+			"MAD",
+			"MRS",
+			"NYO",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LUX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "LYS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "MAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"CIA",
+			"GRO",
+			"MAN",
+			"MRS",
+			"PSA",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "MAN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"BLQ",
+			"BRI",
+			"DUB",
+			"KRK",
+			"LPL",
+			"MAD"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "MRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BLQ",
+			"BRI",
+			"CIA",
+			"GRO",
+			"MAD",
+			"PSA",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "MST",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "MUC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "NAP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "NTE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "NUE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "NYO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"KRK",
+			"LPL",
+			"MRS",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "OPO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "ORK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PEG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PFO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PIK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BHX",
+			"BRI",
+			"DUB",
+			"EDI",
+			"GRO",
+			"LPL",
+			"MAN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PMO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "POZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"CGN",
+			"CIA",
+			"KRK",
+			"NYO",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PRG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PSA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"CIA",
+			"GRO",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "PSR",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "RIX",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "RYG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SCQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SKG",
+		"connectingAirport": "BGY",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SKG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "STN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"DUB",
+			"MAD",
+			"MRS",
+			"NYO",
+			"TRN",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SUF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SVO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SVQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "SXF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"ATH",
+			"BRI",
+			"CGN",
+			"CIA",
+			"DUB",
+			"GRO",
+			"MAN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TLL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TLS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TLV",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TRF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TRN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"CIA",
+			"GRO",
+			"PSA",
+			"TSF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TSF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"CIA",
+			"PSA",
+			"STN",
+			"TRN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "TUN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "VIE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "VLC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "VNO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "WRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"BGY",
+			"BLQ",
+			"BRI",
+			"CIA",
+			"DUB",
+			"KRK",
+			"SXF"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MLA",
+		"airportTo": "ZRH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MMX",
+		"airportTo": "KRK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MPL",
+		"airportTo": "CRL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MPL",
+		"airportTo": "HHN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "AGA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "AGP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"MLA",
+			"RBA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "ALC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "ATH",
+		"connectingAirport": "CRL",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "BES",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "BGY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "BLQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "BOD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "BUD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "CHQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "CIA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "CPH",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "CRL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"FCO",
+			"LIS",
+			"OPO",
+			"RAK",
+			"RBA",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "CTA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "EDI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"RAK",
+			"RBA",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "ESU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "FAO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "FCO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"LIS",
+			"OPO",
+			"PMO",
+			"RAK",
+			"RBA",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "FEZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"LIS",
+			"MAD",
+			"RAK",
+			"RBA",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "FRA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "GSE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "IBZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "KRK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "KUT",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "LIL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"RAK",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "LIS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"MAD",
+			"OPO",
+			"PMO",
+			"RAK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "MAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"LIS",
+			"OPO",
+			"RAK",
+			"RBA",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "MAN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "MLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+			"AGP",
+			"RBA"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "NAP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "NDR",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"MAD",
+			"RAK",
+			"RBA",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "NTE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"RAK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "OPO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"LIS",
+			"PMO",
+			"RAK",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "OTP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "OUD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"MAD",
+			"RAK",
+			"RBA",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "OZZ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "PIS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "PMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "PMO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"RAK",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "PRG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "RAK",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "RBA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"MAD",
+			"PMO",
+			"RAK",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "SOF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "STN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"LIS",
+			"MAD",
+			"OPO",
+			"RAK",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "STR",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "SVQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"LIS",
+			"MAD",
+			"OPO",
+			"PMO",
+			"RAK",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "SXB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "TLS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "TLV",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "TNG",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "ETHNIC",
+		"similarArrivalAirportCodes": [
+			"CRL",
+			"FCO",
+			"MAD",
+			"RAK",
+			"RBA",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "TUF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "VIE",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "VLC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "WMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MRS",
+		"airportTo": "ZAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MST",
+		"airportTo": "ALC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MST",
+		"airportTo": "BRI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MST",
+		"airportTo": "GRO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MST",
+		"airportTo": "MLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MUC",
+		"airportTo": "ALC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MUC",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MUC",
+		"airportTo": "MLA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "AIR_MALTA",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "KM"
+	},
+	{
+		"airportFrom": "MUC",
+		"airportTo": "PMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "AGP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "ALC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "BDS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "BRI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "BRS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "BRU",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "CIY",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"OPO",
+			"OTP",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "CTA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+			"OPO",
+			"OTP",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "DUB",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "EIN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "HER",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "KTW",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "KUN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "LEI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "LIS",
+		"connectingAirport": "OPO",
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "GENERIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "LPA",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "LPL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "MAD",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "MAN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "OPO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"OTP",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "OTP",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"OPO",
+			"STN",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "PMI",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "LEISURE",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "PMO",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "SOF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "STN",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"OPO",
+			"OTP",
+			"SVQ"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "SUF",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "DOMESTIC",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "SVQ",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+			"OPO",
+			"OTP",
+			"STN"
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "TFS",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CANARY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "TXL",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	},
+	{
+		"airportFrom": "MXP",
+		"airportTo": "VLC",
+		"connectingAirport": null,
+		"newRoute": false,
+		"seasonalRoute": false,
+		"operator": "RYANAIR",
+		"group": "CITY",
+		"similarArrivalAirportCodes": [
+		],
+		"tags": [
+		],
+		"carrierCode": "FR"
+	}
+]

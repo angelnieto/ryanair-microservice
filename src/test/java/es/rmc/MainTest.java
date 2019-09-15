@@ -56,8 +56,8 @@ public class MainTest {
     	MultiValueMap<String, String> requestParams = new LinkedMultiValueMap<String, String>();
     	requestParams.add(DEPARTURE, departure1);
     	requestParams.add(ARRIVAL, arrival1);
-    	requestParams.add(DEPARTURE, departure1);
-    	requestParams.add(ARRIVAL, arrival1);
+    	requestParams.add(DEPARTURE_DATETIME, departure1Datetime);
+    	requestParams.add(ARRIVAL_DATETIME, arrival1Datetime);
     	
        	MvcResult result =  mvc.perform(get(resourcePath).params(requestParams))
        			.andExpect(status().isOk()).andReturn();
