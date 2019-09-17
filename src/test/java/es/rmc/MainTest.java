@@ -3,15 +3,15 @@ package es.rmc;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
+import java.util.stream.Collectors;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -29,8 +28,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
@@ -45,12 +42,9 @@ import es.rmc.service.impl.FlightsServiceImpl;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Main.class)
 @TestPropertySource(locations="classpath:test.properties")
-@AutoConfigureMockMvc
+//@AutoConfigureMockMvc
 public class MainTest {
 
-    @Autowired
-    private MockMvc mvc;
-    
     @Autowired
     private RestTemplate restTemplate;
     
@@ -80,57 +74,52 @@ public class MainTest {
     
 	 @Value("${url.routes}")
 	 private String routesEndpoint;
-    
+	 
     private static final String DEPARTURE = "departure", ARRIVAL = "arrival", DEPARTURE_DATETIME = "departureDatetime", ARRIVAL_DATETIME = "arrivalDatetime" ; 
 
     private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
     
     private Route[] routes = null;
+    private String jsonRoutes = null;
     private MockRestServiceServer mockServer;
-    private ObjectMapper mapper = new ObjectMapper();
     
     @Test
     public void getInterconnectionsForDate1() throws Exception {
-    	
-    	MultiValueMap<String, String> requestParams = new LinkedMultiValueMap<String, String>();
-    	requestParams.add(DEPARTURE, departure1);
-    	requestParams.add(ARRIVAL, arrival1);
-    	requestParams.add(DEPARTURE_DATETIME, departure1Datetime);
-    	requestParams.add(ARRIVAL_DATETIME, arrival1Datetime);
     	
     	mockServer.expect(ExpectedCount.once(), 
     	          requestTo(new URI(routesEndpoint)))
     	          .andExpect(method(HttpMethod.GET))
     	          .andRespond(withStatus(HttpStatus.OK)
     	          .contentType(MediaType.APPLICATION_JSON)
-    	          .body(mapper.writeValueAsString(routes)));
+    	          .body(jsonRoutes));
     	
-    	String routes = flightsService.getRoutes();
-    	
-    	mockServer.verify();
-    	
-    	MvcResult result =  mvc.perform(get(resourcePath).params(requestParams))
-       			.andExpect(status().isOk()).andReturn();
-       	
-       	
-       	String content = result.getResponse().getContentAsString();
-       	
-    	System.out.println(content);
-    	
+    	Route[] routes = flightsService.getRoutes();
+     	
     }
     
     @Before
     public void setup() {
-
+    	    	
     	mockServer = MockRestServiceServer.createServer(restTemplate);
     	
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(routesFilePath)));
-			routes = new Gson().fromJson(br, Route[].class);  
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(routesFilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			routes = new Gson().fromJson(jsonRoutes, Route[].class);
+			
 		} catch (FileNotFoundException e) {
-			LOG.error("Exception trying to read mock-routes.json file");
-		}
+			LOG.error("File {} not found", routesFilePath);
+		} catch (IOException e) {
+			LOG.error("File {} not correctly formatted", routesFilePath);
+		}				
+			  
+
 		LOG.debug("Routes size {}", routes.length);
+    }
+    
+    private String readAllLinesWithStream(BufferedReader reader) {
+        return reader.lines()
+          .collect(Collectors.joining(System.lineSeparator()));
     }
     
     // get file from classpath, resources folder

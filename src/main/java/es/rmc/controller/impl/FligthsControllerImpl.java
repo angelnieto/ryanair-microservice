@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
+
 import es.rmc.controller.FlightsController;
 import es.rmc.service.FlightsService;
 
@@ -26,7 +28,7 @@ public class FligthsControllerImpl implements FlightsController{
 	@GetMapping(params = {"departure", "arrival"})
 	public ResponseEntity<String> getInterconnections(@RequestParam(required = true) String departure, @RequestParam(required = true) String departureDatetime, @RequestParam(required = true) String arrival, @RequestParam(required = true) String arrivalDatetime) {
 		
-		String response = service.getRoutes();
+		String response = new Gson().toJson(service.getRoutes());
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
