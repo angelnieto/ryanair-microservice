@@ -35,8 +35,8 @@ public class FlightsServiceImpl implements FlightsService {
 	}
 
 	@Override
-	public String getRoutes() {
-		String response = null;
+	public Route[] getRoutes() {
+		Route[] response = null;
 		
         HttpHeaders requestHeaders = new HttpHeaders();
         requestHeaders.add("Accept", MediaType.APPLICATION_JSON_VALUE); 
@@ -48,7 +48,7 @@ public class FlightsServiceImpl implements FlightsService {
 		    ResponseEntity<Route[]> responseEntity = restTemplate.exchange(routesEndpoint, HttpMethod.GET, requestEntity, Route[].class);
 	
 			if (null != responseEntity && null != responseEntity.getBody() && null != responseEntity.getStatusCode() && responseEntity.getStatusCode().equals(HttpStatus.OK)) {
-			    response = responseEntity.getBody().toString();
+			    response = responseEntity.getBody();
 			}
 	    } catch (Exception e) {
 	    	LOG.error("Exception trying to connect with Ryanair routes endpoint: {}", e.getMessage());
