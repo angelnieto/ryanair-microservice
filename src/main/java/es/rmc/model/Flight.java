@@ -3,6 +3,7 @@ package es.rmc.model;
 import java.io.Serializable;
 import java.time.LocalTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -20,9 +21,11 @@ public class Flight implements Serializable{
 	private Integer number;
 	
 	@JsonProperty("departureTime")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="HH:mm")
 	private LocalTime departureTime;
 	
 	@JsonProperty("arrivalTime")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="HH:mm")
 	private LocalTime arrivalTime;
 	
 	
