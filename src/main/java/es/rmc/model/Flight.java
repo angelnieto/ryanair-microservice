@@ -21,11 +21,11 @@ public class Flight implements Serializable{
 	private Integer number;
 	
 	@JsonProperty("departureTime")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="HH:mm")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="hh:mm")
 	private LocalTime departureTime;
 	
 	@JsonProperty("arrivalTime")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="HH:mm")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="hh:mm")
 	private LocalTime arrivalTime;
 	
 	
