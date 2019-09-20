@@ -19,5 +19,5 @@ public interface FlightsController {
 	
 	@ApiOperation(value = "Devuelve el listado de fondos", tags = { TAGS.FONDO })
 	@ApiResponses({ @ApiResponse(code = 200, message = "El listado de fondos ha sido devuelto"), @ApiResponse(code = 204, message = "No se han encontrado fondos") })
-	ResponseEntity<String> getInterconnections(@ApiParam(value = "Departure airport IATA code", required = true)String departure, @ApiParam(value = "Departure datetime", required = true)String departureDatetime , @ApiParam(value = "Arrival airport IATA code", required = true)String arrival, @ApiParam(value = "Arrival datetime", required = true)String arrivalDatetime);
+	ResponseEntity<String> getFlights(@ApiParam(value = "Departure airport IATA code", required = true)String departure, @ApiParam(value = "Departure datetime", required = true)String departureDatetime , @ApiParam(value = "Arrival airport IATA code", required = true)String arrival, @ApiParam(value = "Arrival datetime", required = true)String arrivalDatetime);
 }

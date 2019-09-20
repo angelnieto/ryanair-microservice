@@ -1,0 +1,180 @@
+{
+	"month": 10,
+	"days": [
+		{
+			"day": 2,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:00",
+					"arrivalTime": "11:35"
+				}
+			]
+		},
+		{
+			"day": 4,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "15:25",
+					"arrivalTime": "19:00"
+				}
+			]
+		},
+		{
+			"day": 6,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:25",
+					"arrivalTime": "13:00"
+				},
+				{
+					"number": "1926",
+					"departureTime": "22:00",
+					"arrivalTime": "02:35"
+				}
+			]
+		},
+		{
+			"day": 8,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:00",
+					"arrivalTime": "11:35"
+				}
+			]
+		},
+		{
+			"day": 10,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "15:25",
+					"arrivalTime": "19:00"
+				}
+			]
+		},
+		{
+			"day": 12,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:25",
+					"arrivalTime": "13:00"
+				},
+				{
+					"number": "1926",
+					"departureTime": "22:00",
+					"arrivalTime": "02:35"
+				}
+			]
+		},
+				{
+			"day": 14,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:00",
+					"arrivalTime": "11:35"
+				}
+			]
+		},
+		{
+			"day": 16,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "15:25",
+					"arrivalTime": "19:00"
+				}
+			]
+		},
+		{
+			"day": 18,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:25",
+					"arrivalTime": "13:00"
+				},
+				{
+					"number": "1926",
+					"departureTime": "22:00",
+					"arrivalTime": "02:35"
+				}
+			]
+		},
+				{
+			"day": 20,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:00",
+					"arrivalTime": "11:35"
+				}
+			]
+		},
+		{
+			"day": 22,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "15:25",
+					"arrivalTime": "19:00"
+				}
+			]
+		},
+		{
+			"day": 24,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:25",
+					"arrivalTime": "13:00"
+				},
+				{
+					"number": "1926",
+					"departureTime": "22:00",
+					"arrivalTime": "02:35"
+				}
+			]
+		},
+				{
+			"day": 26,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:00",
+					"arrivalTime": "11:35"
+				}
+			]
+		},
+		{
+			"day": 28,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "15:25",
+					"arrivalTime": "19:00"
+				}
+			]
+		},
+		{
+			"day": 30,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "09:25",
+					"arrivalTime": "13:00"
+				},
+				{
+					"number": "1926",
+					"departureTime": "22:00",
+					"arrivalTime": "02:35"
+				}
+			]
+		}
+	]
+}

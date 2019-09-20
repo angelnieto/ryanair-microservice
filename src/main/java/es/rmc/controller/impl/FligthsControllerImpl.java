@@ -2,6 +2,7 @@ package es.rmc.controller.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,10 +26,10 @@ public class FligthsControllerImpl implements FlightsController{
 		return  new ResponseEntity<>("Interconnections method", HttpStatus.OK);
 	}
 
-	@GetMapping(params = {"departure", "arrival"})
-	public ResponseEntity<String> getInterconnections(@RequestParam(required = true) String departure, @RequestParam(required = true) String departureDatetime, @RequestParam(required = true) String arrival, @RequestParam(required = true) String arrivalDatetime) {
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> getFlights(@RequestParam(required = true) String departure, @RequestParam(required = true) String departureDatetime, @RequestParam(required = true) String arrival, @RequestParam(required = true) String arrivalDatetime) {
 		
-		String response = new Gson().toJson(service.getRoutes());
+		String response = new Gson().toJson(service.getFlights(departure, departureDatetime, arrival, arrivalDatetime));
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 

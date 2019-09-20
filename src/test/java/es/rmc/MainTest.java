@@ -10,9 +10,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.stream.Collectors;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,21 +30,14 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-
-import es.rmc.model.Route;
 import es.rmc.service.FlightsService;
 import es.rmc.service.impl.FlightsServiceImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Main.class)
 @TestPropertySource(locations="classpath:test.properties")
-//@AutoConfigureMockMvc
 public class MainTest {
 
     @Autowired
@@ -69,31 +64,55 @@ public class MainTest {
     @Value("${arrival1.datetime1}")
     private String arrival1Datetime;
     
-    @Value("${routes.filepath}")
-    private String routesFilePath;
-    
-	 @Value("${url.routes}")
+   	 @Value("${url.routes}")
 	 private String routesEndpoint;
+	
+   	 @Value("${routes.filepath}")
+     private String routesFilePath;
+   	 
+   	 
+	 @Value("${url.MAD.IBZ}")
+	 private String scheduledFlights1Endpoint;
 	 
-    private static final String DEPARTURE = "departure", ARRIVAL = "arrival", DEPARTURE_DATETIME = "departureDatetime", ARRIVAL_DATETIME = "arrivalDatetime" ; 
+	 @Value("${flights.MAD.IBZ}")
+	 private String scheduledFlights1FilePath;
+	 	 
+	 @Value("${url.MAD.MAN}")
+	 private String scheduledFlights2Endpoint;
+	 
+	 @Value("${flights.MAD.MAN}")
+	 private String scheduledFlights2FilePath;
+	 
+	 @Value("${url.MAN.IBZ}")
+	 private String scheduledFlights3Endpoint;
+	 
+	 @Value("${flights.MAN.IBZ}")
+	 private String scheduledFlights3FilePath;
+	 
+	 @Value("${url.MAD.MRS}")
+	 private String scheduledFlights4Endpoint;
+	 
+	 @Value("${flights.MAD.MRS}")
+	 private String scheduledFlights4FilePath;
+	 
+	 @Value("${url.MRS.IBZ}")
+	 private String scheduledFlights5Endpoint;
+	 
+	 @Value("${flights.MRS.IBZ}")
+	 private String scheduledFlights5FilePath;
 
-    private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
+	 
+    //private static final String DEPARTURE = "departure", ARRIVAL = "arrival", DEPARTURE_DATETIME = "departureDatetime", ARRIVAL_DATETIME = "arrivalDatetime" ; 
+  
     
-    private Route[] routes = null;
-    private String jsonRoutes = null;
     private MockRestServiceServer mockServer;
     
     @Test
-    public void getInterconnectionsForDate1() throws Exception {
+    public void getInterconnectionsForDate1() {
     	
-    	mockServer.expect(ExpectedCount.once(), 
-    	          requestTo(new URI(routesEndpoint)))
-    	          .andExpect(method(HttpMethod.GET))
-    	          .andRespond(withStatus(HttpStatus.OK)
-    	          .contentType(MediaType.APPLICATION_JSON)
-    	          .body(jsonRoutes));
+    	String jsonResponse = flightsService.getFlights(departure1, departure1Datetime, arrival1, arrival1Datetime);
     	
-    	Route[] routes = flightsService.getRoutes();
+    	Assert.assertNotNull(jsonResponse);
      	
     }
     
@@ -102,20 +121,123 @@ public class MainTest {
     	    	
     	mockServer = MockRestServiceServer.createServer(restTemplate);
     	
+    	String jsonRoutes = null;
+    	
     	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(routesFilePath))))
     	{
     		jsonRoutes = readAllLinesWithStream(br);
-			routes = new Gson().fromJson(jsonRoutes, Route[].class);
+//    		Route[] routes = new Gson().fromJson(jsonRoutes, Route[].class);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(routesEndpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
 			
 		} catch (FileNotFoundException e) {
-			LOG.error("File {} not found", routesFilePath);
+			Assert.fail(String.format("File %s not found", routesFilePath));
 		} catch (IOException e) {
-			LOG.error("File {} not correctly formatted", routesFilePath);
-		}				
-			  
-
-		LOG.debug("Routes size {}", routes.length);
-    }
+			Assert.fail(String.format("File %s not correctly formatted", routesFilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", routesEndpoint));
+		}
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(scheduledFlights1FilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(scheduledFlights1Endpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
+			
+    	} catch (FileNotFoundException e) {
+			Assert.fail(String.format("File %s not found", scheduledFlights1FilePath));
+		} catch (IOException e) {
+			Assert.fail(String.format("File %s not correctly formatted", scheduledFlights1FilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", scheduledFlights1Endpoint));
+		}
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(scheduledFlights2FilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(scheduledFlights2Endpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
+			
+    	} catch (FileNotFoundException e) {
+			Assert.fail(String.format("File %s not found", scheduledFlights2FilePath));
+		} catch (IOException e) {
+			Assert.fail(String.format("File %s not correctly formatted", scheduledFlights2FilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", scheduledFlights2Endpoint));
+		}
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(scheduledFlights3FilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(scheduledFlights3Endpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
+			
+    	} catch (FileNotFoundException e) {
+			Assert.fail(String.format("File %s not found", scheduledFlights3FilePath));
+		} catch (IOException e) {
+			Assert.fail(String.format("File %s not correctly formatted", scheduledFlights3FilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", scheduledFlights3Endpoint));
+		}
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(scheduledFlights4FilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(scheduledFlights4Endpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
+			
+    	} catch (FileNotFoundException e) {
+			Assert.fail(String.format("File %s not found", scheduledFlights4FilePath));
+		} catch (IOException e) {
+			Assert.fail(String.format("File %s not correctly formatted", scheduledFlights4FilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", scheduledFlights4Endpoint));
+		}
+    	
+    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(scheduledFlights5FilePath))))
+    	{
+    		jsonRoutes = readAllLinesWithStream(br);
+			
+			mockServer.expect(ExpectedCount.once(), 
+		  	          requestTo(new URI(scheduledFlights5Endpoint)))
+		  	          .andExpect(method(HttpMethod.GET))
+		  	          .andRespond(withStatus(HttpStatus.OK)
+		  	          .contentType(MediaType.APPLICATION_JSON)
+		  	          .body(jsonRoutes));
+			
+    	} catch (FileNotFoundException e) {
+			Assert.fail(String.format("File %s not found", scheduledFlights5FilePath));
+		} catch (IOException e) {
+			Assert.fail(String.format("File %s not correctly formatted", scheduledFlights5FilePath));
+		} catch (URISyntaxException e) {
+			Assert.fail(String.format("Url %s not correctly formatted", scheduledFlights5Endpoint));
+		}
+  	}
     
     private String readAllLinesWithStream(BufferedReader reader) {
         return reader.lines()

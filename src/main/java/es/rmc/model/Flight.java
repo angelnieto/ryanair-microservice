@@ -21,12 +21,10 @@ public class Flight implements Serializable{
 	private Integer number;
 	
 	@JsonProperty("departureTime")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="hh:mm")
-	private LocalTime departureTime;
+	private String departureTime;
 	
 	@JsonProperty("arrivalTime")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="hh:mm")
-	private LocalTime arrivalTime;
+	private String arrivalTime;
 	
 	
 	  // =========================================== Constructors =========================================
@@ -42,12 +40,12 @@ public class Flight implements Serializable{
 	}
 
 
-	public LocalTime getDepartureTime() {
+	public String getDepartureTime() {
 		return departureTime;
 	}
 
 
-	public LocalTime getArrivalTime() {
+	public String getArrivalTime() {
 		return arrivalTime;
 	}
 
@@ -57,12 +55,12 @@ public class Flight implements Serializable{
 	}
 
 
-	public void setDepartureTime(LocalTime departureTime) {
+	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
 
 
-	public void setArrivalTime(LocalTime arrivalTime) {
+	public void setArrivalTime(String arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
 
