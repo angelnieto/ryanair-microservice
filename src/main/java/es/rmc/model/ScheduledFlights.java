@@ -20,7 +20,7 @@ public class ScheduledFlights implements Serializable{
 	private Integer month;
 	
 	@JsonProperty("days")
-	private List<FlightDays> flightDays;
+	private List<FlightsAtDay> flightDays;
 	
 	
 	  // =========================================== Constructors =========================================
@@ -37,7 +37,7 @@ public class ScheduledFlights implements Serializable{
 	}
 
 
-	public List<FlightDays> getFlightDays() {
+	public List<FlightsAtDay> getFlightDays() {
 		return flightDays;
 	}
 
@@ -47,7 +47,7 @@ public class ScheduledFlights implements Serializable{
 	}
 
 
-	public void setFlightDays(List<FlightDays> flightDays) {
+	public void setFlightDays(List<FlightsAtDay> flightDays) {
 		this.flightDays = flightDays;
 	}
  

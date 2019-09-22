@@ -1,9 +1,9 @@
 package es.rmc.model;
 
 import java.io.Serializable;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -25,6 +25,9 @@ public class Flight implements Serializable{
 	
 	@JsonProperty("arrivalTime")
 	private String arrivalTime;
+	
+	private LocalDateTime departureDatetime;
+	private LocalDateTime arrivalDatetime;
 	
 	
 	  // =========================================== Constructors =========================================
@@ -62,6 +65,34 @@ public class Flight implements Serializable{
 
 	public void setArrivalTime(String arrivalTime) {
 		this.arrivalTime = arrivalTime;
+	}
+
+	public LocalDateTime getDepartureDatetime() {
+		return departureDatetime;
+	}
+
+
+	public void setDepartureDatetime(String year, String month, String day) {
+		String departureDatetimeStr = new StringBuilder(year).append("-").append(month).append("-").append(day).append(" ").append(departureTime).toString();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		this.departureDatetime = LocalDateTime.parse(departureDatetimeStr, formatter);
+	}
+	
+	public LocalDateTime getArrivalDatetime() {
+		return arrivalDatetime;
+	}
+
+	public void setArrivalDatetime(String year, String month, String day) {
+		String arrivalDatetimeStr = new StringBuilder(year).append("-").append(month).append("-").append(day).append(" ").append(arrivalTime).toString();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		LocalDateTime calculatedDatetime = LocalDateTime.parse(arrivalDatetimeStr, formatter); 
+		
+		//checks if arrival date is the same as departure date
+		if(departureDatetime != null && !calculatedDatetime.isBefore(departureDatetime)) {
+			this.arrivalDatetime = calculatedDatetime;
+		} else { //else adds 1 day to arrival datetime object
+			this.arrivalDatetime = calculatedDatetime.plusDays(1);
+		}
 	}
 
     // =========================================== Serialization =========================================

@@ -46,6 +46,17 @@ public class Route implements Serializable{
 	@JsonProperty("carrierCode")
 	private String carrierCode;
 	
+	private enum GroupType {
+		  CANARY,
+		  CITY,
+		  DOMESTIC,
+		  ETHNIC,
+		  GENERIC,
+		  LEISURE,
+		  SUN,
+		  UKP
+	}
+	
 	  // =========================================== Constructors =========================================
 
     public Route() {

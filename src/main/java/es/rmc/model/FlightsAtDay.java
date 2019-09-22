@@ -12,7 +12,7 @@ import java.util.List;
  * @author rmc
  *
  */
-public class FlightDays implements Serializable{
+public class FlightsAtDay implements Serializable{
 
 	private static final long serialVersionUID = -8966317557993604523L;
 
@@ -25,7 +25,7 @@ public class FlightDays implements Serializable{
 	
 	  // =========================================== Constructors =========================================
 
-    public FlightDays() {
+    public FlightsAtDay() {
         super();
     }
 
@@ -66,5 +66,7 @@ public class FlightDays implements Serializable{
 		builder.append("]");
 		return builder.toString();
     }
+    
+    
 }
 

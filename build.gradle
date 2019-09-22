@@ -39,6 +39,7 @@ dependencies {
     compile 'io.springfox:springfox-swagger-ui:2.9.2'
     compile 'commons-collections:commons-collections:3.2.2' 
     compile 'com.google.code.gson:gson:2.8.5' 
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
 }
 
 bootJar {

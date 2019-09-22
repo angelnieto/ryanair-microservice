@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -22,9 +21,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import es.rmc.config.FlightsServiceConfig;
+import es.rmc.exception.FlightsException;
+import es.rmc.model.Flight;
+import es.rmc.model.FlightsMatched;
+import es.rmc.model.FlightsMatched.Leg;
 import es.rmc.model.Route;
 import es.rmc.model.ScheduledFlights;
 import es.rmc.service.FlightsService;
+import es.rmc.utils.Constants;
 
 @Service
 public class FlightsServiceImpl implements FlightsService {
@@ -41,13 +45,6 @@ public class FlightsServiceImpl implements FlightsService {
 	 
 	 private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
 	
-	@Override
-	public String getInterconnections(String departure, String departureDatetime, String arrival,
-			String arrivalDatetime) {
-		
-		return "Interconnections method with parameters";
-	}
-
 	private Route[] getRoutes() {
 		Route[] response = null;
 		
@@ -74,48 +71,107 @@ public class FlightsServiceImpl implements FlightsService {
 	}
 
 	@Override
-	public String getFlights(String departure, String departureDatetime, String arrival, String arrivalDatetime) {
+	public List<FlightsMatched> getFlights(String departure, LocalDateTime departureDatetime, String arrival, LocalDateTime arrivalDatetime) throws FlightsException {
 		
-		String response = null;
+		List<FlightsMatched> response = new ArrayList<>();
 		
-		Route[] routes = getRoutes();
-		if(routes.length > 0) {
-			List<Route> routesList = new ArrayList<Route>();
-			Collections.addAll(routesList, routes); 
-			
-			//search for direct fligths
-			List<Route> directRoutes = routesList.stream().filter(r -> departure.equalsIgnoreCase(r.getOriginAirport()) && arrival.equalsIgnoreCase(r.getDestinationAirport())).collect(Collectors.toList());
-			
-			//search for interconnected fligths
-			List<Route> validDepartureRoutes = routesList.stream().filter(r -> departure.equalsIgnoreCase(r.getOriginAirport())).collect(Collectors.toList());
-			List<Route> validArrivalRoutes = routesList.stream().filter(r -> arrival.equalsIgnoreCase(r.getDestinationAirport())).collect(Collectors.toList());
-			
-			List<Route> interconnectedRoutes = new ArrayList<>();
-			validDepartureRoutes.stream().forEach(d -> {
-				validArrivalRoutes.stream().forEach(a -> {
-					//if the destination of a route is the origin of other route from the filtered routes, 
-					//then a flight between departure and arrival is possible
-					if(d.getDestinationAirport().equalsIgnoreCase(a.getOriginAirport())) {
-						interconnectedRoutes.add(d);
-						interconnectedRoutes.add(a);
+		// checks if arrivalDatetime is greater than departureDatetime
+		if(arrivalDatetime.isAfter(departureDatetime)) {
+			//checks if temporal interval is lower than 24 hours
+			if(!arrivalDatetime.isAfter(departureDatetime.plusDays(1))) {
+				
+				Route[] routes = getRoutes();
+				if(routes.length > 0) {
+					List<Route> routesList = new ArrayList<Route>();
+					Collections.addAll(routesList, routes); 
+					
+					//search for direct fligths
+					List<Route> directRoutes = routesList.stream().filter(r -> departure.equalsIgnoreCase(r.getOriginAirport()) && arrival.equalsIgnoreCase(r.getDestinationAirport())).collect(Collectors.toList());
+					
+					//search for interconnected fligths
+					List<Route> validDepartureRoutes = routesList.stream().filter(r -> departure.equalsIgnoreCase(r.getOriginAirport())).collect(Collectors.toList());
+					List<Route> validArrivalRoutes = routesList.stream().filter(r -> arrival.equalsIgnoreCase(r.getDestinationAirport())).collect(Collectors.toList());
+					
+					List<Route> interconnectedRoutes = new ArrayList<>();
+					validDepartureRoutes.forEach(d -> {
+						validArrivalRoutes.forEach(a -> {
+							//if the destination of a route is the origin of other route from the filtered routes, 
+							//then a flight between departure and arrival is possible
+							if(d.getDestinationAirport().equalsIgnoreCase(a.getOriginAirport())) {
+								interconnectedRoutes.add(d);
+								interconnectedRoutes.add(a);
+							}
+						});
+					});
+					
+					List<ScheduledFlights> scheduledDirectFligths = new ArrayList<>();
+					List<ScheduledFlights> scheduledIndirectFligths = new ArrayList<>();
+					if(directRoutes.size() == 1) {
+						scheduledDirectFligths.add(getScheduledFlights(directRoutes.get(0), departureDatetime.getYear(), departureDatetime.getMonthValue()));
+						//if arrival date is for next month
+						if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
+							scheduledDirectFligths.add(getScheduledFlights(directRoutes.get(0), arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
+						}
 					}
-				});
-			});
-			
-			ScheduledFlights scheduledDirectFligths = null;
-			ScheduledFlights scheduledIndirectFligths = null;
-			if(directRoutes.size() == 1) {
-				scheduledDirectFligths = getScheduledFlights(directRoutes.get(0), getYear(departureDatetime), getMonth(departureDatetime));
-			}
-			if(!interconnectedRoutes.isEmpty()) {
+					if(!interconnectedRoutes.isEmpty()) {
+						interconnectedRoutes.forEach(indirectRoute -> {
+							scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, departureDatetime.getYear(), departureDatetime.getMonthValue()));
+							//if arrival date is for next month
+							if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
+								scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
+							}
+						});
+					}
+					
+					// Add direct flights to response
+					if(!scheduledDirectFligths.isEmpty()) {
+						List<Flight> validFlights = new ArrayList<>(); 
+						
+						scheduledDirectFligths.forEach(sdf ->{
+							sdf.getFlightDays().forEach(fd -> {
+								fd.getFlights().forEach(f -> {
+									if(!f.getDepartureDatetime().isBefore(departureDatetime) && !f.getArrivalDatetime().isAfter(arrivalDatetime)) {
+										validFlights.add(f);
+									}
+								});
+							});
+						}); 
+						
+						if(!validFlights.isEmpty()) {
+							response.add(createFlightsMatched(Constants.STOP.ZERO, departure, arrival, validFlights));
+						}
+					}		
 				
+					// Add direct flights to response
+					if(!scheduledIndirectFligths.isEmpty()) {		
+						
+					}	
+									
+				}
+			} else {
+				throw new FlightsException(FlightsException.FlightsExceptionType.INVALID_INTERVAL);
 			}
-			
+		} else {
+			throw new FlightsException(FlightsException.FlightsExceptionType.INVALID_DATES);
 		}
-				
+						
 		return response;
 	}
 	
+	private FlightsMatched createFlightsMatched(int stops, String departure, String arrival, List<Flight> flights) {
+		FlightsMatched fm = new FlightsMatched();
+		
+		List<Leg> legs = new ArrayList<>();
+		for(Flight flight: flights) {
+			Leg leg = fm.new Leg(departure, flight.getDepartureDatetime(), arrival, flight.getArrivalDatetime());
+			legs.add(leg);
+		}
+				
+		fm.setLegs(legs);
+		fm.setStops(stops);
+		return fm;
+	}
+
 	private ScheduledFlights getScheduledFlights(Route route, int year, int month) {
 		ScheduledFlights response = null;
 		
@@ -131,6 +187,15 @@ public class FlightsServiceImpl implements FlightsService {
 	
 			if (null != responseEntity && null != responseEntity.getBody() && null != responseEntity.getStatusCode() && responseEntity.getStatusCode().equals(HttpStatus.OK)) {
 			    response = responseEntity.getBody();
+			    
+			    //fills datetime properties for Flight object
+			    response.getFlightDays().forEach(fd -> {
+			    	fd.getFlights().forEach(f -> {
+			    		f.setDepartureDatetime(getYear(year), getMonth(month),  getDay(fd.getDay()));
+			    		f.setArrivalDatetime(getYear(year), getMonth(month),  getDay(fd.getDay()));
+			    	});
+			    });
+			    
 			}
 	    } catch (Exception e) {
 	    	LOG.error("Exception trying to connect with Ryanair routes endpoint: {}", e.getMessage());
@@ -139,12 +204,24 @@ public class FlightsServiceImpl implements FlightsService {
 	    return response;
 	}
 
-	private int getMonth(String dateTime) {
-		return getLocalDateTime(dateTime).getMonthValue();    
+	private String getYear(int year) {
+		return Integer.toString(year);
 	}
 	
-	private int getYear(String dateTime) {
-		return getLocalDateTime(dateTime).getYear();    
+	private String getMonth(int month) {
+		StringBuilder sb = new StringBuilder();
+		if(month < 10) {
+			sb.append("0");    
+		}
+		return sb.append(Integer.toString(month)).toString();
+	}
+	
+	private String getDay(int day) {
+		StringBuilder sb = new StringBuilder();
+		if(day < 10) {
+			sb.append("0");    
+		}
+		return sb.append(Integer.toString(day)).toString();
 	}
 
 	private LocalDateTime getLocalDateTime(String dateTime) {
