@@ -1,12 +1,12 @@
 package es.rmc.service.impl;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -55,7 +55,7 @@ public class FlightsServiceImpl implements FlightsService {
 			if (null != responseEntity && null != responseEntity.getBody() && null != responseEntity.getStatusCode() && responseEntity.getStatusCode().equals(HttpStatus.OK)) {
 				
 				//filter all outes with operator = RYANAIR and connectingAirport = null
-				List<Route> routesFiltered = Arrays.asList(responseEntity.getBody()).stream().filter(route -> (config.getOperator().equalsIgnoreCase(route.getOperator()) && route.getConnectingAirport() == null)).collect(Collectors.toList());
+				List<Route> routesFiltered = Arrays.asList(responseEntity.getBody()).stream().filter(route -> config.getOperator().equalsIgnoreCase(route.getOperator()) && route.getConnectingAirport() == null).collect(Collectors.toList());
 				
 				response = routesFiltered.toArray(new Route[routesFiltered.size()]);
 			}
@@ -131,11 +131,12 @@ public class FlightsServiceImpl implements FlightsService {
 					
 					// Add direct flights to response
 					if(!scheduledDirectFligths.isEmpty()) {
-						List<Flight> validFlights = new ArrayList<>(); 
+						Set<Flight> validFlights = new HashSet<>(); 
 						
 						scheduledDirectFligths.forEach(sdf ->{
 							sdf.getFlightDays().forEach(fd -> {
 								fd.getFlights().forEach(f -> {
+									//checks if flight datatimes fulfill request datatimes 
 									if(!f.getDepartureDatetime().isBefore(departureDatetime) && !f.getArrivalDatetime().isAfter(arrivalDatetime)) {
 										validFlights.add(f);
 									}
@@ -144,12 +145,48 @@ public class FlightsServiceImpl implements FlightsService {
 						}); 
 						
 						if(!validFlights.isEmpty()) {
-							response.add(createFlightsMatched(Constants.STOP.ZERO, departure, arrival, validFlights));
+							response.add(createFlightsMatched(Constants.STOP.ZERO, validFlights));
 						}
 					}		
 				
-					// Add direct flights to response
-					if(!scheduledIndirectFligths.isEmpty()) {		
+					// Add indirect flights to response
+					if(!scheduledIndirectFligths.isEmpty()) {
+						Set<Flight> validFlights = new HashSet<>(); 
+						
+						Set<Flight> validScheduledFlights = new HashSet<>(); 
+						
+						//1 : checks if flight datatimes fulfill request datatimes 
+						scheduledIndirectFligths.forEach(sif ->{
+							sif.getFlightDays().forEach(fd -> {
+								fd.getFlights().forEach(f -> {
+									//checks if flight datatimes fulfill request datatimes 
+									if(!f.getDepartureDatetime().isBefore(departureDatetime) && !f.getArrivalDatetime().isAfter(arrivalDatetime)) {
+										validScheduledFlights.add(f);
+									}
+								});
+							});
+						}); 
+						// 2 : checks if departure and arrival airports are connected by 2 flights
+						if(!validScheduledFlights.isEmpty()) {
+							
+							validScheduledFlights.forEach(f -> {
+								
+								//checks if flights from departure airport have at least one pair to arrival airport,
+								// and that the difference between the arrival and the next departure should be 2h or greater  
+								if(departure.equalsIgnoreCase(f.getOriginAirport())){
+									List<Flight> interconnections = validScheduledFlights.stream().filter(vsf -> f.getDestinationAirport().equalsIgnoreCase(vsf.getOriginAirport()) && !vsf.getDepartureDatetime().isBefore(f.getArrivalDatetime().plusHours(config.getMinInterconnectionHours()))).collect(Collectors.toList());
+									if(!interconnections.isEmpty()) {
+										validFlights.add(f);
+										validFlights.addAll(interconnections);
+									}
+								}
+								
+							});
+						}
+						
+						if(!validFlights.isEmpty()) {
+							response.add(createFlightsMatched(Constants.STOP.ONE, validFlights));
+						}
 						
 					}	
 									
@@ -164,12 +201,12 @@ public class FlightsServiceImpl implements FlightsService {
 		return response;
 	}
 	
-	private FlightsMatched createFlightsMatched(int stops, String departure, String arrival, List<Flight> flights) {
+	private FlightsMatched createFlightsMatched(int stops, Set<Flight> flights) {
 		FlightsMatched fm = new FlightsMatched();
 		
 		List<Leg> legs = new ArrayList<>();
 		for(Flight flight: flights) {
-			Leg leg = fm.new Leg(departure, flight.getDepartureDatetime(), arrival, flight.getArrivalDatetime());
+			Leg leg = fm.new Leg(flight.getOriginAirport(), flight.getDepartureDatetime(), flight.getDestinationAirport(), flight.getArrivalDatetime());
 			legs.add(leg);
 		}
 				
@@ -194,11 +231,13 @@ public class FlightsServiceImpl implements FlightsService {
 			if (null != responseEntity && null != responseEntity.getBody() && null != responseEntity.getStatusCode() && responseEntity.getStatusCode().equals(HttpStatus.OK)) {
 			    response = responseEntity.getBody();
 			    
-			    //fills datetime properties for Flight object
+			    //fills datetime and airport properties in Flight object
 			    response.getFlightDays().forEach(fd -> {
 			    	fd.getFlights().forEach(f -> {
 			    		f.setDepartureDatetime(getYear(year), getMonth(month),  getDay(fd.getDay()));
 			    		f.setArrivalDatetime(getYear(year), getMonth(month),  getDay(fd.getDay()));
+			    		f.setOriginAirport(route.getOriginAirport());
+			    		f.setDestinationAirport(route.getDestinationAirport());
 			    	});
 			    });
 			    

@@ -26,6 +26,8 @@ public class Flight implements Serializable{
 	@JsonProperty("arrivalTime")
 	private String arrivalTime;
 	
+	private String originAirport;
+	private String destinationAirport;
 	private LocalDateTime departureDatetime;
 	private LocalDateTime arrivalDatetime;
 	
@@ -94,8 +96,29 @@ public class Flight implements Serializable{
 			this.arrivalDatetime = calculatedDatetime.plusDays(1);
 		}
 	}
+	
+	public String getOriginAirport() {
+		return originAirport;
+	}
+
+
+	public void setOriginAirport(String originAirport) {
+		this.originAirport = originAirport;
+	}
+
+
+	public String getDestinationAirport() {
+		return destinationAirport;
+	}
+
+
+	public void setDestinationAirport(String destinationAirport) {
+		this.destinationAirport = destinationAirport;
+	}
+
 
     // =========================================== Serialization =========================================
+
 
 	/* (non-Javadoc)
      * 

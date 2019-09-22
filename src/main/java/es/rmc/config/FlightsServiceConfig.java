@@ -12,6 +12,7 @@ public class FlightsServiceConfig {
 	@NotNull private String routes;
 	@NotNull private String flights;
 	@NotNull private int maxInterval;
+	@NotNull private int minInterconnectionHours;
 	@NotNull private String operator;
 	 
 	// =========================================== Getters and setters =========================================
@@ -39,6 +40,12 @@ public class FlightsServiceConfig {
 	}
 	public void setOperator(String operator) {
 		this.operator = operator;
+	}
+	public int getMinInterconnectionHours() {
+		return minInterconnectionHours;
+	}
+	public void setMinInterconnectionHours(int minInterconnectionHours) {
+		this.minInterconnectionHours = minInterconnectionHours;
 	}
 
 }
