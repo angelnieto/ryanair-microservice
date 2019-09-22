@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -52,7 +53,11 @@ public class FlightsServiceImpl implements FlightsService {
 		    ResponseEntity<Route[]> responseEntity = restTemplate.exchange(config.getRoutes(), HttpMethod.GET, getHttpRequest(), Route[].class);
 	
 			if (null != responseEntity && null != responseEntity.getBody() && null != responseEntity.getStatusCode() && responseEntity.getStatusCode().equals(HttpStatus.OK)) {
-			    response = responseEntity.getBody();
+				
+				//filter all outes with operator = RYANAIR and connectingAirport = null
+				List<Route> routesFiltered = Arrays.asList(responseEntity.getBody()).stream().filter(route -> (config.getOperator().equalsIgnoreCase(route.getOperator()) && route.getConnectingAirport() == null)).collect(Collectors.toList());
+				
+				response = routesFiltered.toArray(new Route[routesFiltered.size()]);
 			}
 	    } catch (Exception e) {
 	    	LOG.error("Exception trying to connect with Ryanair routes endpoint: {}", e.getMessage());
@@ -77,8 +82,9 @@ public class FlightsServiceImpl implements FlightsService {
 		
 		// checks if arrivalDatetime is greater than departureDatetime
 		if(arrivalDatetime.isAfter(departureDatetime)) {
-			//checks if temporal interval is lower than 24 hours
-			if(!arrivalDatetime.isAfter(departureDatetime.plusDays(1))) {
+			
+			//checks maximum temporal interval restriction
+			if(!arrivalDatetime.isAfter(departureDatetime.plusDays(config.getMaxInterval()))) {
 				
 				Route[] routes = getRoutes();
 				if(routes.length > 0) {
@@ -222,12 +228,6 @@ public class FlightsServiceImpl implements FlightsService {
 			sb.append("0");    
 		}
 		return sb.append(Integer.toString(day)).toString();
-	}
-
-	private LocalDateTime getLocalDateTime(String dateTime) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
-		LocalDateTime date = LocalDateTime.parse(dateTime, formatter);
-		return date;
 	}
 
 }

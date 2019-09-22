@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,9 +22,7 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -35,14 +32,16 @@ import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import es.rmc.config.TestSettings;
 import es.rmc.exception.FlightsException;
 import es.rmc.model.FlightsMatched;
 import es.rmc.service.FlightsService;
-import es.rmc.service.impl.FlightsServiceImpl;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Main.class)
-@TestPropertySource(locations="classpath:test.properties")
+@SpringBootTest(classes = {Main.class, TestSettings.class})
+@TestPropertySource("classpath:test.properties")
 public class MainTest {
 
     @Autowired
@@ -51,89 +50,42 @@ public class MainTest {
     @Autowired
     private FlightsService flightsService;
     
-    @Value("${server.servlet.context-path}")
-    private String contextPath;
-    
-    @Value("${server.servlet.resource-path}")
-    private String resourcePath;
-    
-    @Value("${departure1.iata}")
-    private String departure1;
-    
-//    @Value("${departure1.datetime1}")
-    @Value("#{T(java.time.LocalDateTime).parse('${departure1.datetime1}')}")
-    private LocalDateTime departure1Datetime;
-    
-    @Value("${arrival1.iata}")
-    private String arrival1;
-    
-//    @Value("${arrival1.datetime1}")
-    @Value("#{T(java.time.LocalDateTime).parse('${arrival1.datetime1}')}")
-    private LocalDateTime arrival1Datetime;
-    
-   	 @Value("${url.routes}")
-	 private String routesEndpoint;
-	
-   	 @Value("${routes.filepath}")
-     private String routesFilePath;
-   	 
-   	 
-	 @Value("${url.MAD.IBZ}")
-	 private String scheduledFlights1Endpoint;
+    @Autowired
+    private TestSettings config;
 	 
-	 @Value("${flights.MAD.IBZ}")
-	 private String scheduledFlights1FilePath;
-	 	 
-	 @Value("${url.MAD.MAN}")
-	 private String scheduledFlights2Endpoint;
-	 
-	 @Value("${flights.MAD.MAN}")
-	 private String scheduledFlights2FilePath;
-	 
-	 @Value("${url.MAN.IBZ}")
-	 private String scheduledFlights3Endpoint;
-	 
-	 @Value("${flights.MAN.IBZ}")
-	 private String scheduledFlights3FilePath;
-	 
-	 @Value("${url.MAD.MRS}")
-	 private String scheduledFlights4Endpoint;
-	 
-	 @Value("${flights.MAD.MRS}")
-	 private String scheduledFlights4FilePath;
-	 
-	 @Value("${url.MRS.IBZ}")
-	 private String scheduledFlights5Endpoint;
-	 
-	 @Value("${flights.MRS.IBZ}")
-	 private String scheduledFlights5FilePath;
-
-	 
-    //private static final String DEPARTURE = "departure", ARRIVAL = "arrival", DEPARTURE_DATETIME = "departureDatetime", ARRIVAL_DATETIME = "arrivalDatetime" ; 
-  
-    
+    private static Logger LOG = LoggerFactory.getLogger(MainTest.class);
+        
     private MockRestServiceServer mockServer;
     
     @Test
     public void getInterconnectionsForDate1() throws FlightsException {
     	
-    	List<FlightsMatched> response = flightsService.getFlights(departure1, departure1Datetime, arrival1, arrival1Datetime);
+    	List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime1(), config.getArrival1(), config.getDatetime2());
+    	
+    	try {
+			ObjectMapper mapper = new ObjectMapper();
+			
+			LOG.info(mapper.writeValueAsString(response));
+		} catch (IOException e) {
+			LOG.info( response.toString());
+		}
     	
     	Assert.assertNotNull(response);
-     	
-    }
+   }
     
     @Before
     public void setup() {
     	    	
     	mockServer = MockRestServiceServer.createServer(restTemplate);
     	
-    	readJsonFile(routesFilePath, routesEndpoint);
-    	readJsonFile(scheduledFlights1FilePath, scheduledFlights1Endpoint);
-    	readJsonFile(scheduledFlights2FilePath, scheduledFlights2Endpoint);    	
-    	readJsonFile(scheduledFlights3FilePath, scheduledFlights3Endpoint); 
-    	readJsonFile(scheduledFlights4FilePath, scheduledFlights4Endpoint); 
-    	readJsonFile(scheduledFlights5FilePath, scheduledFlights5Endpoint); 
+    	//all the mock requests must be done at next order,
+    	//otherwise, the test will fail 
+    	readJsonFile(config.getRoutesFilePath(), config.getRoutesEndpoint());
+    	readJsonFile(config.getScheduledFlights_MAD_IBZ(), config.getScheduledFlightsEndpoint_MAD_IBZ());
+    	readJsonFile(config.getScheduledFlights_MAD_MAN(), config.getScheduledFlightsEndpoint_MAD_MAN());
+    	readJsonFile(config.getScheduledFlights_MAN_IBZ(), config.getScheduledFlightsEndpoint_MAN_IBZ()); 
+    	readJsonFile(config.getScheduledFlights_MAD_MRS(), config.getScheduledFlightsEndpoint_MAD_MRS()); 
+    	readJsonFile(config.getScheduledFlights_MRS_IBZ(), config.getScheduledFlightsEndpoint_MRS_IBZ()); 
   	}
     
     private void readJsonFile(String filePath, String endpoint) {

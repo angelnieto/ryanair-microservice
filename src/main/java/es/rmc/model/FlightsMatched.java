@@ -1,11 +1,14 @@
 package es.rmc.model;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import springfox.documentation.annotations.ApiIgnore;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -70,29 +73,24 @@ public class FlightsMatched implements Serializable{
 		
 		private static final long serialVersionUID = -15775660502978437L;
 
-		@JsonProperty("departureAirport")
 		private String originAirport;
-		
-		@JsonProperty("departureDateTime")
-		private LocalDateTime departureDateTime;
-		
-		@JsonProperty("arrivalAirport")
+		private String departureDateTime;
 		private String destinationAirport;
-		
-		@JsonProperty("arrivalDateTime")
-		private LocalDateTime arrivalDateTime;
+		private String arrivalDateTime;
 		
 		  // =========================================== Constructors =========================================
 		
 		public Leg(String originAirport,  LocalDateTime departureDateTime, String destinationAirport, LocalDateTime arrivalDateTime) {
-			this.originAirport = originAirport;
-			this.departureDateTime = departureDateTime;
-			this.destinationAirport = destinationAirport;
-			this.arrivalDateTime = arrivalDateTime;
+						
+			setOriginAirport(originAirport);
+			setDepartureDateTime(departureDateTime);
+			setDestinationAirport(destinationAirport);
+			setArrivalDateTime(arrivalDateTime);
 		}
 	
 		// =========================================== Getters and setters =========================================
 
+		@JsonGetter("departureAirport")
 		public String getOriginAirport() {
 			return originAirport;
 		}
@@ -100,15 +98,18 @@ public class FlightsMatched implements Serializable{
 		public void setOriginAirport(String originAirport) {
 			this.originAirport = originAirport;
 		}
-
-		public LocalDateTime getDepartureDateTime() {
+		
+		@JsonGetter("departureDateTime")
+		public String getDepartureDateTime() {
 			return departureDateTime;
 		}
 
 		public void setDepartureDateTime(LocalDateTime departureDateTime) {
-			this.departureDateTime = departureDateTime;
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
+			this.departureDateTime = formatter.format(departureDateTime);
 		}
-
+		
+		@JsonGetter("arrivalAirport")
 		public String getDestinationAirport() {
 			return destinationAirport;
 		}
@@ -116,13 +117,15 @@ public class FlightsMatched implements Serializable{
 		public void setDestinationAirport(String destinationAirport) {
 			this.destinationAirport = destinationAirport;
 		}
-
-		public LocalDateTime getArrivalDateTime() {
+		
+		@JsonGetter("arrivalDateTime")
+		public String getArrivalDateTime() {
 			return arrivalDateTime;
 		}
 
 		public void setArrivalDateTime(LocalDateTime arrivalDateTime) {
-			this.arrivalDateTime = arrivalDateTime;
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
+			this.arrivalDateTime = formatter.format(arrivalDateTime);
 		}
 			
 	}
