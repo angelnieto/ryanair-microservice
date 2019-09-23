@@ -47,7 +47,7 @@ public class FlightsServiceImpl implements FlightsService {
 	 private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
 	
 	private Route[] getRoutes() {
-		Route[] response = null;
+		Route[] response = {};
 		
 	    try {
 		    ResponseEntity<Route[]> responseEntity = restTemplate.exchange(config.getRoutes(), HttpMethod.GET, getHttpRequest(), Route[].class);
