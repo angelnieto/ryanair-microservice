@@ -1,9 +1,9 @@
 package es.rmc.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 /**
  * Object that maps responses received from 
@@ -16,34 +16,16 @@ public class Route implements Serializable{
 
 	private static final long serialVersionUID = -1893336294674637252L;
 
-	@JsonProperty("airportFrom")
+	// JSON properties
 	private String originAirport;
-	
-	@JsonProperty("airportTo")
 	private String destinationAirport;
-	
-	@JsonProperty("connectingAirport")
 	private String connectingAirport;
-	
-	@JsonProperty("newRoute")
 	private boolean newRoute;
-	
-	@JsonProperty("seasonalRoute")
 	private boolean seasonalRoute;
-	
-	@JsonProperty("operator")
 	private String operator;
-	
-	@JsonProperty("group")
 	private GroupType group;
-	
-	@JsonProperty("similarArrivalAirportCodes")
 	private List<String> similarAirports;
-	
-	@JsonProperty("tags")
 	private List<String> tags;
-	
-	@JsonProperty("carrierCode")
 	private String carrierCode;
 	
 	private enum GroupType {
@@ -69,7 +51,8 @@ public class Route implements Serializable{
     public String getOriginAirport() {
 		return originAirport;
 	}
-
+    
+    @JsonSetter("airportFrom")
 	public void setOriginAirport(String originAirport) {
 		this.originAirport = originAirport;
 	}
@@ -78,6 +61,7 @@ public class Route implements Serializable{
 		return destinationAirport;
 	}
 
+	@JsonSetter("airportTo")
 	public void setDestinationAirport(String destinationAirport) {
 		this.destinationAirport = destinationAirport;
 	}
@@ -126,6 +110,7 @@ public class Route implements Serializable{
 		return similarAirports;
 	}
 
+	@JsonSetter("similarArrivalAirportCodes")
 	public void setSimilarAirports(List<String> similarAirports) {
 		this.similarAirports = similarAirports;
 	}

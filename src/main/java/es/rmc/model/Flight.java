@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 /**
  * Object that maps responses received from 
  * Routes API: https://servicesapi.ryanair.com/timtbl/3/schedules/{departure}/{arrival}/years/{year}/months/{month} endpoint
@@ -17,15 +15,11 @@ public class Flight implements Serializable{
 
 	private static final long serialVersionUID = -2378754017125516877L;
 
-	@JsonProperty("number")
+	// JSON properties
 	private Integer number;
-	
-	@JsonProperty("departureTime")
 	private String departureTime;
-	
-	@JsonProperty("arrivalTime")
 	private String arrivalTime;
-	
+	// Internal properties
 	private String originAirport;
 	private String destinationAirport;
 	private LocalDateTime departureDatetime;

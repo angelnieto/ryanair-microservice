@@ -172,11 +172,13 @@ public class FlightsServiceImpl implements FlightsService {
 							validScheduledFlights.forEach(f -> {
 								
 								//checks if flights from departure airport have at least one pair to arrival airport,
-								// and that the difference between the arrival and the next departure should be 2h or greater  
+								// and the difference between the arrival and the next departure is 2h or greater  
 								if(departure.equalsIgnoreCase(f.getOriginAirport())){
 									List<Flight> interconnections = validScheduledFlights.stream().filter(vsf -> f.getDestinationAirport().equalsIgnoreCase(vsf.getOriginAirport()) && !vsf.getDepartureDatetime().isBefore(f.getArrivalDatetime().plusHours(config.getMinInterconnectionHours()))).collect(Collectors.toList());
 									if(!interconnections.isEmpty()) {
+										// Adds first flight
 										validFlights.add(f);
+										// Adds second flight
 										validFlights.addAll(interconnections);
 									}
 								}
@@ -209,9 +211,12 @@ public class FlightsServiceImpl implements FlightsService {
 			Leg leg = fm.new Leg(flight.getOriginAirport(), flight.getDepartureDatetime(), flight.getDestinationAirport(), flight.getArrivalDatetime());
 			legs.add(leg);
 		}
-				
+		//Orders flights by its departure datetime	
+		Collections.sort(legs, fm.new SortByDepartureDatetime());
+		
 		fm.setLegs(legs);
 		fm.setStops(stops);
+		
 		return fm;
 	}
 

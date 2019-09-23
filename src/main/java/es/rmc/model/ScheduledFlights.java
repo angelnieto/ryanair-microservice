@@ -1,9 +1,9 @@
 package es.rmc.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 /**
  * Object that maps responses received from 
@@ -16,10 +16,8 @@ public class ScheduledFlights implements Serializable{
 
 	private static final long serialVersionUID = 2693444226572531664L;
 
-	@JsonProperty("month")
+	// JSON properties
 	private Integer month;
-	
-	@JsonProperty("days")
 	private List<FlightsAtDay> flightDays;
 	
 	
@@ -46,7 +44,7 @@ public class ScheduledFlights implements Serializable{
 		this.month = month;
 	}
 
-
+	@JsonSetter("days")
 	public void setFlightDays(List<FlightsAtDay> flightDays) {
 		this.flightDays = flightDays;
 	}
