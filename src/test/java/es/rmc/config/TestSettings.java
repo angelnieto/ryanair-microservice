@@ -34,6 +34,12 @@ public class TestSettings {
 	
 	@NotNull
 	private LocalDateTime datetime6;
+	
+	@NotNull
+	private LocalDateTime datetime7;
+	
+	@NotNull
+	private LocalDateTime datetime8;
 
 	@NotNull
 	private String routesEndpoint;
@@ -42,34 +48,64 @@ public class TestSettings {
 	private String routesFilePath;
 	
 	@NotNull
-	private String scheduledFlightsEndpoint_MAD_IBZ;
+	private String scheduledFlightsEndpoint_10_MAD_IBZ;
 
 	@NotNull
-	private String scheduledFlights_MAD_IBZ;
+	private String scheduledFlights_10_MAD_IBZ;
+	
+	@NotNull
+	private String scheduledFlightsEndpoint_11_MAD_IBZ;
 
 	@NotNull
-	private String scheduledFlightsEndpoint_MAD_MAN;
+	private String scheduledFlights_11_MAD_IBZ;
 
 	@NotNull
-	private String scheduledFlights_MAD_MAN;
+	private String scheduledFlightsEndpoint_10_MAD_MAN;
 
 	@NotNull
-	private String scheduledFlightsEndpoint_MAN_IBZ;
+	private String scheduledFlights_10_MAD_MAN;
+	
+	@NotNull
+	private String scheduledFlightsEndpoint_11_MAD_MAN;
 
 	@NotNull
-	private String scheduledFlights_MAN_IBZ;
+	private String scheduledFlights_11_MAD_MAN;
 
 	@NotNull
-	private String scheduledFlightsEndpoint_MAD_MRS;
+	private String scheduledFlightsEndpoint_10_MAN_IBZ;
+	
+	@NotNull
+	private String scheduledFlights_10_MAN_IBZ;
+	
+	@NotNull
+	private String scheduledFlightsEndpoint_11_MAN_IBZ;
+	
+	@NotNull
+	private String scheduledFlights_11_MAN_IBZ;
 
 	@NotNull
-	private String scheduledFlights_MAD_MRS;
+	private String scheduledFlightsEndpoint_10_MAD_MRS;
 
 	@NotNull
-	private String scheduledFlightsEndpoint_MRS_IBZ;
+	private String scheduledFlights_10_MAD_MRS;
+	
+	@NotNull
+	private String scheduledFlightsEndpoint_11_MAD_MRS;
 
 	@NotNull
-	private String scheduledFlights_MRS_IBZ;
+	private String scheduledFlights_11_MAD_MRS;
+
+	@NotNull
+	private String scheduledFlightsEndpoint_10_MRS_IBZ;
+
+	@NotNull
+	private String scheduledFlights_10_MRS_IBZ;
+	
+	@NotNull
+	private String scheduledFlightsEndpoint_11_MRS_IBZ;
+
+	@NotNull
+	private String scheduledFlights_11_MRS_IBZ;
 
 	// =========================================== Getters and setters
 	// =========================================
@@ -137,6 +173,22 @@ public class TestSettings {
 		this.datetime6 = parseToLocalDateTime(datetime);
 	}
 	
+	public LocalDateTime getDatetime7() {
+		return datetime7;
+	}
+	
+	public void setDatetime7(String datetime) {
+		this.datetime7 = parseToLocalDateTime(datetime);
+	}
+	
+	public LocalDateTime getDatetime8() {
+		return datetime8;
+	}
+	
+	public void setDatetime8(String datetime) {
+		this.datetime8 = parseToLocalDateTime(datetime);
+	}
+	
 	public String getRoutesEndpoint() {
 		return routesEndpoint;
 	}
@@ -153,84 +205,164 @@ public class TestSettings {
 		this.routesFilePath = routesFilePath;
 	}
 
-	public String getScheduledFlightsEndpoint_MAD_IBZ() {
-		return scheduledFlightsEndpoint_MAD_IBZ;
+	public String getScheduledFlightsEndpoint_10_MAD_IBZ() {
+		return scheduledFlightsEndpoint_10_MAD_IBZ;
 	}
 
-	public void setScheduledFlightsEndpoint_MAD_IBZ(String scheduledFlightsEndpoint_MAD_IBZ) {
-		this.scheduledFlightsEndpoint_MAD_IBZ = scheduledFlightsEndpoint_MAD_IBZ;
+	public void setScheduledFlightsEndpoint_10_MAD_IBZ(String scheduledFlightsEndpoint_MAD_IBZ) {
+		this.scheduledFlightsEndpoint_10_MAD_IBZ = scheduledFlightsEndpoint_MAD_IBZ;
+	}
+	
+	public String getScheduledFlightsEndpoint_11_MAD_IBZ() {
+		return scheduledFlightsEndpoint_11_MAD_IBZ;
 	}
 
-	public String getScheduledFlights_MAD_IBZ() {
-		return scheduledFlights_MAD_IBZ;
+	public void setScheduledFlightsEndpoint_11_MAD_IBZ(String scheduledFlightsEndpoint_MAD_IBZ) {
+		this.scheduledFlightsEndpoint_11_MAD_IBZ = scheduledFlightsEndpoint_MAD_IBZ;
 	}
 
-	public void setScheduledFlights_MAD_IBZ(String scheduledFlights_MAD_IBZ) {
-		this.scheduledFlights_MAD_IBZ = scheduledFlights_MAD_IBZ;
+	public String getScheduledFlights_10_MAD_IBZ() {
+		return scheduledFlights_10_MAD_IBZ;
 	}
 
-	public String getScheduledFlightsEndpoint_MAD_MAN() {
-		return scheduledFlightsEndpoint_MAD_MAN;
+	public void setScheduledFlights_10_MAD_IBZ(String scheduledFlights_MAD_IBZ) {
+		this.scheduledFlights_10_MAD_IBZ = scheduledFlights_MAD_IBZ;
+	}
+	
+	public String getScheduledFlights_11_MAD_IBZ() {
+		return scheduledFlights_11_MAD_IBZ;
 	}
 
-	public void setScheduledFlightsEndpoint_MAD_MAN(String scheduledFlightsEndpoint_MAD_MAN) {
-		this.scheduledFlightsEndpoint_MAD_MAN = scheduledFlightsEndpoint_MAD_MAN;
+	public void setScheduledFlights_11_MAD_IBZ(String scheduledFlights_MAD_IBZ) {
+		this.scheduledFlights_11_MAD_IBZ = scheduledFlights_MAD_IBZ;
 	}
 
-	public String getScheduledFlights_MAD_MAN() {
-		return scheduledFlights_MAD_MAN;
+	public String getScheduledFlightsEndpoint_10_MAD_MAN() {
+		return scheduledFlightsEndpoint_10_MAD_MAN;
 	}
 
-	public void setScheduledFlights_MAD_MAN(String scheduledFlights_MAD_MAN) {
-		this.scheduledFlights_MAD_MAN = scheduledFlights_MAD_MAN;
+	public void setScheduledFlightsEndpoint_10_MAD_MAN(String scheduledFlightsEndpoint_MAD_MAN) {
+		this.scheduledFlightsEndpoint_10_MAD_MAN = scheduledFlightsEndpoint_MAD_MAN;
 	}
 
-	public String getScheduledFlightsEndpoint_MAN_IBZ() {
-		return scheduledFlightsEndpoint_MAN_IBZ;
+	public String getScheduledFlights_10_MAD_MAN() {
+		return scheduledFlights_10_MAD_MAN;
 	}
 
-	public void setScheduledFlightsEndpoint_MAN_IBZ(String scheduledFlightsEndpoint_MAN_IBZ) {
-		this.scheduledFlightsEndpoint_MAN_IBZ = scheduledFlightsEndpoint_MAN_IBZ;
+	public void setScheduledFlights_10_MAD_MAN(String scheduledFlights_MAD_MAN) {
+		this.scheduledFlights_10_MAD_MAN = scheduledFlights_MAD_MAN;
+	}
+	
+	public String getScheduledFlightsEndpoint_11_MAD_MAN() {
+		return scheduledFlightsEndpoint_11_MAD_MAN;
 	}
 
-	public String getScheduledFlights_MAN_IBZ() {
-		return scheduledFlights_MAN_IBZ;
+	public void setScheduledFlightsEndpoint_11_MAD_MAN(String scheduledFlightsEndpoint_MAD_MAN) {
+		this.scheduledFlightsEndpoint_11_MAD_MAN = scheduledFlightsEndpoint_MAD_MAN;
 	}
 
-	public void setScheduledFlights_MAN_IBZ(String scheduledFlights_MAN_IBZ) {
-		this.scheduledFlights_MAN_IBZ = scheduledFlights_MAN_IBZ;
+	public String getScheduledFlights_11_MAD_MAN() {
+		return scheduledFlights_11_MAD_MAN;
 	}
 
-	public String getScheduledFlightsEndpoint_MAD_MRS() {
-		return scheduledFlightsEndpoint_MAD_MRS;
+	public void setScheduledFlights_11_MAD_MAN(String scheduledFlights_MAD_MAN) {
+		this.scheduledFlights_11_MAD_MAN = scheduledFlights_MAD_MAN;
 	}
 
-	public void setScheduledFlightsEndpoint_MAD_MRS(String scheduledFlightsEndpoint_MAD_MRS) {
-		this.scheduledFlightsEndpoint_MAD_MRS = scheduledFlightsEndpoint_MAD_MRS;
+	public String getScheduledFlightsEndpoint_10_MAN_IBZ() {
+		return scheduledFlightsEndpoint_10_MAN_IBZ;
 	}
 
-	public String getScheduledFlights_MAD_MRS() {
-		return scheduledFlights_MAD_MRS;
+	public void setScheduledFlightsEndpoint_10_MAN_IBZ(String scheduledFlightsEndpoint_MAN_IBZ) {
+		this.scheduledFlightsEndpoint_10_MAN_IBZ = scheduledFlightsEndpoint_MAN_IBZ;
 	}
 
-	public void setScheduledFlights_MAD_MRS(String scheduledFlights_MAD_MRS) {
-		this.scheduledFlights_MAD_MRS = scheduledFlights_MAD_MRS;
+	public String getScheduledFlights_10_MAN_IBZ() {
+		return scheduledFlights_10_MAN_IBZ;
 	}
 
-	public String getScheduledFlightsEndpoint_MRS_IBZ() {
-		return scheduledFlightsEndpoint_MRS_IBZ;
+	public void setScheduledFlights_10_MAN_IBZ(String scheduledFlights_MAN_IBZ) {
+		this.scheduledFlights_10_MAN_IBZ = scheduledFlights_MAN_IBZ;
+	}
+	
+	public String getScheduledFlightsEndpoint_11_MAN_IBZ() {
+		return scheduledFlightsEndpoint_11_MAN_IBZ;
 	}
 
-	public void setScheduledFlightsEndpoint_MRS_IBZ(String scheduledFlightsEndpoint_MRS_IBZ) {
-		this.scheduledFlightsEndpoint_MRS_IBZ = scheduledFlightsEndpoint_MRS_IBZ;
+	public void setScheduledFlightsEndpoint_11_MAN_IBZ(String scheduledFlightsEndpoint_MAN_IBZ) {
+		this.scheduledFlightsEndpoint_11_MAN_IBZ = scheduledFlightsEndpoint_MAN_IBZ;
 	}
 
-	public String getScheduledFlights_MRS_IBZ() {
-		return scheduledFlights_MRS_IBZ;
+	public String getScheduledFlights_11_MAN_IBZ() {
+		return scheduledFlights_11_MAN_IBZ;
 	}
 
-	public void setScheduledFlights_MRS_IBZ(String scheduledFlights_MRS_IBZ) {
-		this.scheduledFlights_MRS_IBZ = scheduledFlights_MRS_IBZ;
+	public void setScheduledFlights_11_MAN_IBZ(String scheduledFlights_MAN_IBZ) {
+		this.scheduledFlights_11_MAN_IBZ = scheduledFlights_MAN_IBZ;
+	}
+
+	public String getScheduledFlightsEndpoint_10_MAD_MRS() {
+		return scheduledFlightsEndpoint_10_MAD_MRS;
+	}
+
+	public void setScheduledFlightsEndpoint_10_MAD_MRS(String scheduledFlightsEndpoint_MAD_MRS) {
+		this.scheduledFlightsEndpoint_10_MAD_MRS = scheduledFlightsEndpoint_MAD_MRS;
+	}
+
+	public String getScheduledFlights_10_MAD_MRS() {
+		return scheduledFlights_10_MAD_MRS;
+	}
+
+	public void setScheduledFlights_10_MAD_MRS(String scheduledFlights_MAD_MRS) {
+		this.scheduledFlights_10_MAD_MRS = scheduledFlights_MAD_MRS;
+	}
+
+	public String getScheduledFlightsEndpoint_11_MAD_MRS() {
+		return scheduledFlightsEndpoint_11_MAD_MRS;
+	}
+
+	public void setScheduledFlightsEndpoint_11_MAD_MRS(String scheduledFlightsEndpoint_MAD_MRS) {
+		this.scheduledFlightsEndpoint_11_MAD_MRS = scheduledFlightsEndpoint_MAD_MRS;
+	}
+
+	public String getScheduledFlights_11_MAD_MRS() {
+		return scheduledFlights_11_MAD_MRS;
+	}
+
+	public void setScheduledFlights_11_MAD_MRS(String scheduledFlights_MAD_MRS) {
+		this.scheduledFlights_11_MAD_MRS = scheduledFlights_MAD_MRS;
+	}
+	
+	public String getScheduledFlightsEndpoint_10_MRS_IBZ() {
+		return scheduledFlightsEndpoint_10_MRS_IBZ;
+	}
+
+	public void setScheduledFlightsEndpoint_10_MRS_IBZ(String scheduledFlightsEndpoint_MRS_IBZ) {
+		this.scheduledFlightsEndpoint_10_MRS_IBZ = scheduledFlightsEndpoint_MRS_IBZ;
+	}
+
+	public String getScheduledFlights_10_MRS_IBZ() {
+		return scheduledFlights_10_MRS_IBZ;
+	}
+
+	public void setScheduledFlights_10_MRS_IBZ(String scheduledFlights_MRS_IBZ) {
+		this.scheduledFlights_10_MRS_IBZ = scheduledFlights_MRS_IBZ;
+	}
+	
+	public String getScheduledFlightsEndpoint_11_MRS_IBZ() {
+		return scheduledFlightsEndpoint_11_MRS_IBZ;
+	}
+
+	public void setScheduledFlightsEndpoint_11_MRS_IBZ(String scheduledFlightsEndpoint_MRS_IBZ) {
+		this.scheduledFlightsEndpoint_11_MRS_IBZ = scheduledFlightsEndpoint_MRS_IBZ;
+	}
+
+	public String getScheduledFlights_11_MRS_IBZ() {
+		return scheduledFlights_11_MRS_IBZ;
+	}
+
+	public void setScheduledFlights_11_MRS_IBZ(String scheduledFlights_MRS_IBZ) {
+		this.scheduledFlights_11_MRS_IBZ = scheduledFlights_MRS_IBZ;
 	}
 	
 	// =========================================== Parser methods

@@ -42,7 +42,7 @@ import es.rmc.service.FlightsService;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { Main.class, TestSettings.class })
 @TestPropertySource("classpath:test.properties")
-public class MainTest {
+public class MainTest1 {
 
 	@Autowired
 	private RestTemplate restTemplate;
@@ -53,7 +53,7 @@ public class MainTest {
 	@Autowired
 	private TestSettings config;
 
-	private static Logger LOG = LoggerFactory.getLogger(MainTest.class);
+	private static Logger LOG = LoggerFactory.getLogger(MainTest1.class);
 
 	private MockRestServiceServer mockServer;
 
@@ -93,7 +93,7 @@ public class MainTest {
 		Assert.assertTrue(response.get(0).getStops() == 1);
 	}
 
-	// @Test
+	//@Test
 	public void testNoFlights() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime5(),
@@ -110,23 +110,6 @@ public class MainTest {
 		Assert.assertTrue(response.size() == 0);
 	}
 
-	@Test
-	public void testDirectAndInterconnectedFlights() throws FlightsException {
-
-		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime3(),
-				config.getArrival1(), config.getDatetime4());
-
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-
-			LOG.info(mapper.writeValueAsString(response));
-		} catch (IOException e) {
-			LOG.info(response.toString());
-		}
-
-		Assert.assertTrue(response.size() == 2);
-	}
-
 	@Before
 	public void setup() {
 
@@ -135,11 +118,11 @@ public class MainTest {
 		// all the mock requests must be done at next order,
 		// otherwise, the test will fail
 		readJsonFile(config.getRoutesFilePath(), config.getRoutesEndpoint());
-		readJsonFile(config.getScheduledFlights_MAD_IBZ(), config.getScheduledFlightsEndpoint_MAD_IBZ());
-		readJsonFile(config.getScheduledFlights_MAD_MAN(), config.getScheduledFlightsEndpoint_MAD_MAN());
-		readJsonFile(config.getScheduledFlights_MAN_IBZ(), config.getScheduledFlightsEndpoint_MAN_IBZ());
-		readJsonFile(config.getScheduledFlights_MAD_MRS(), config.getScheduledFlightsEndpoint_MAD_MRS());
-		readJsonFile(config.getScheduledFlights_MRS_IBZ(), config.getScheduledFlightsEndpoint_MRS_IBZ());
+		readJsonFile(config.getScheduledFlights_10_MAD_IBZ(), config.getScheduledFlightsEndpoint_10_MAD_IBZ());
+		readJsonFile(config.getScheduledFlights_10_MAD_MAN(), config.getScheduledFlightsEndpoint_10_MAD_MAN());
+		readJsonFile(config.getScheduledFlights_10_MAN_IBZ(), config.getScheduledFlightsEndpoint_10_MAN_IBZ());
+		readJsonFile(config.getScheduledFlights_10_MAD_MRS(), config.getScheduledFlightsEndpoint_10_MAD_MRS());
+		readJsonFile(config.getScheduledFlights_10_MRS_IBZ(), config.getScheduledFlightsEndpoint_10_MRS_IBZ());
 	}
 
 	private void readJsonFile(String filePath, String endpoint) {
