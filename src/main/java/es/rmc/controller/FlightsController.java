@@ -3,6 +3,7 @@ package es.rmc.controller;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
@@ -24,6 +25,6 @@ public interface FlightsController {
 
 
 	@ApiOperation(value = "Returns all available flights between departure and arrival airports for a given temporal interval", tags = { TAGS.FLIGHTS })
-	@ApiResponses({ @ApiResponse(code = 200, message = "Success"), @ApiResponse(code = 204, message = "No se han encontrado fondos") })
+	@ApiResponses({ @ApiResponse(code = 200, response = FlightsMatched.class , message = "Success" ), @ApiResponse(code = 412, message = "Prerequisites not met") })
 	ResponseEntity<List<FlightsMatched>> getFlights(@ApiParam(value = "Departure airport IATA code", required = true) String departure, @ApiParam(value = "Departure datetime", required = true) LocalDateTime departureDatetime , @ApiParam(value = "Arrival airport IATA code", required = true) String arrival, @ApiParam(value = "Arrival datetime", required = true) LocalDateTime arrivalDatetime);
 }
