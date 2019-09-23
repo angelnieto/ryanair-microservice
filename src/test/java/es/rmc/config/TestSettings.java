@@ -13,15 +13,27 @@ public class TestSettings {
 	
 	@NotNull
 	private String departure1;
+	
+	@NotNull
+	private String arrival1;
 
 	@NotNull
 	private LocalDateTime datetime1;
 
 	@NotNull
-	private String arrival1;
-
-	@NotNull
 	private LocalDateTime datetime2;
+	
+	@NotNull
+	private LocalDateTime datetime3;
+	
+	@NotNull
+	private LocalDateTime datetime4;
+	
+	@NotNull
+	private LocalDateTime datetime5;
+	
+	@NotNull
+	private LocalDateTime datetime6;
 
 	@NotNull
 	private String routesEndpoint;
@@ -73,13 +85,8 @@ public class TestSettings {
 		return datetime1;
 	}
 
-//	public void setDatetime1(LocalDateTime datetime1) {
-//		this.datetime1 = datetime1;
-//	}
-	
 	public void setDatetime1(String datetime) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
-		this.datetime1 = LocalDateTime.parse(datetime, formatter);
+		this.datetime1 = parseToLocalDateTime(datetime);
 	}
 
 	public String getArrival1() {
@@ -94,13 +101,40 @@ public class TestSettings {
 		return datetime2;
 	}
 
-//	public void setDatetime2(LocalDateTime datetime2) {
-//		this.datetime2 = datetime2;
-//	}
-
 	public void setDatetime2(String datetime) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
-		this.datetime2 = LocalDateTime.parse(datetime, formatter);
+		this.datetime2 = parseToLocalDateTime(datetime);
+	}
+	
+	public LocalDateTime getDatetime3() {
+		return datetime3;
+	}
+	
+	public void setDatetime3(String datetime) {
+		this.datetime3 = parseToLocalDateTime(datetime);
+	}
+
+	public LocalDateTime getDatetime4() {
+		return datetime4;
+	}
+	
+	public void setDatetime4(String datetime) {
+		this.datetime4 = parseToLocalDateTime(datetime);
+	}
+	
+	public LocalDateTime getDatetime5() {
+		return datetime5;
+	}
+	
+	public void setDatetime5(String datetime) {
+		this.datetime5 = parseToLocalDateTime(datetime);
+	}
+	
+	public LocalDateTime getDatetime6() {
+		return datetime6;
+	}
+	
+	public void setDatetime6(String datetime) {
+		this.datetime6 = parseToLocalDateTime(datetime);
 	}
 	
 	public String getRoutesEndpoint() {
@@ -197,6 +231,14 @@ public class TestSettings {
 
 	public void setScheduledFlights_MRS_IBZ(String scheduledFlights_MRS_IBZ) {
 		this.scheduledFlights_MRS_IBZ = scheduledFlights_MRS_IBZ;
+	}
+	
+	// =========================================== Parser methods
+	// =========================================
+	
+	private LocalDateTime parseToLocalDateTime(String datetime) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));
+		return LocalDateTime.parse(datetime, formatter);
 	}
 
 }

@@ -1,7 +1,5 @@
 package es.rmc.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,10 +14,8 @@ public class FlightsAtDay implements Serializable{
 
 	private static final long serialVersionUID = -8966317557993604523L;
 
-	@JsonProperty("day")
+	// JSON properties
 	private Integer day;
-	
-	@JsonProperty("flights")
 	private List<Flight> flights;
 	
 	

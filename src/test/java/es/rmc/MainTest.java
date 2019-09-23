@@ -40,93 +40,141 @@ import es.rmc.model.FlightsMatched;
 import es.rmc.service.FlightsService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {Main.class, TestSettings.class})
+@SpringBootTest(classes = { Main.class, TestSettings.class })
 @TestPropertySource("classpath:test.properties")
 public class MainTest {
 
-    @Autowired
-    private RestTemplate restTemplate;
-    
-    @Autowired
-    private FlightsService flightsService;
-    
-    @Autowired
-    private TestSettings config;
-	 
-    private static Logger LOG = LoggerFactory.getLogger(MainTest.class);
-        
-    private MockRestServiceServer mockServer;
-    
-    @Test
-    public void getInterconnectionsForDate1() throws FlightsException {
-    	
-    	List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime1(), config.getArrival1(), config.getDatetime2());
-    	
-    	try {
+	@Autowired
+	private RestTemplate restTemplate;
+
+	@Autowired
+	private FlightsService flightsService;
+
+	@Autowired
+	private TestSettings config;
+
+	private static Logger LOG = LoggerFactory.getLogger(MainTest.class);
+
+	private MockRestServiceServer mockServer;
+
+	// @Test
+	public void testDirectFlight() throws FlightsException {
+
+		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime1(),
+				config.getArrival1(), config.getDatetime2());
+
+		try {
 			ObjectMapper mapper = new ObjectMapper();
-			
+
 			LOG.info(mapper.writeValueAsString(response));
 		} catch (IOException e) {
-			LOG.info( response.toString());
+			LOG.info(response.toString());
 		}
-    	
-    	Assert.assertNotNull(response);
-   }
-    
-    @Before
-    public void setup() {
-    	    	
-    	mockServer = MockRestServiceServer.createServer(restTemplate);
-    	
-    	//all the mock requests must be done at next order,
-    	//otherwise, the test will fail 
-    	readJsonFile(config.getRoutesFilePath(), config.getRoutesEndpoint());
-    	readJsonFile(config.getScheduledFlights_MAD_IBZ(), config.getScheduledFlightsEndpoint_MAD_IBZ());
-    	readJsonFile(config.getScheduledFlights_MAD_MAN(), config.getScheduledFlightsEndpoint_MAD_MAN());
-    	readJsonFile(config.getScheduledFlights_MAN_IBZ(), config.getScheduledFlightsEndpoint_MAN_IBZ()); 
-    	readJsonFile(config.getScheduledFlights_MAD_MRS(), config.getScheduledFlightsEndpoint_MAD_MRS()); 
-    	readJsonFile(config.getScheduledFlights_MRS_IBZ(), config.getScheduledFlightsEndpoint_MRS_IBZ()); 
-  	}
-    
-    private void readJsonFile(String filePath, String endpoint) {
-    	
-    	try(BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(filePath))))
-    	{
-    		String jsonRoutes = readAllLinesWithStream(br);
-			
-			mockServer.expect(ExpectedCount.once(), 
-		  	          requestTo(new URI(endpoint)))
-		  	          .andExpect(method(HttpMethod.GET))
-		  	          .andRespond(withStatus(HttpStatus.OK)
-		  	          .contentType(MediaType.APPLICATION_JSON)
-		  	          .body(jsonRoutes));
-			
-    	} catch (FileNotFoundException e) {
+
+		Assert.assertTrue(response.size() == 1);
+		Assert.assertTrue(response.get(0).getStops() == 0);
+	}
+
+	// @Test
+	public void testInterconnection() throws FlightsException {
+
+		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime3(),
+				config.getArrival1(), config.getDatetime4());
+
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+
+			LOG.info(mapper.writeValueAsString(response));
+		} catch (IOException e) {
+			LOG.info(response.toString());
+		}
+
+		Assert.assertTrue(response.size() == 1);
+		Assert.assertTrue(response.get(0).getStops() == 1);
+	}
+
+	// @Test
+	public void testNoFlights() throws FlightsException {
+
+		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime5(),
+				config.getArrival1(), config.getDatetime6());
+
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+
+			LOG.info(mapper.writeValueAsString(response));
+		} catch (IOException e) {
+			LOG.info(response.toString());
+		}
+
+		Assert.assertTrue(response.size() == 0);
+	}
+
+	@Test
+	public void testDirectAndInterconnectedFlights() throws FlightsException {
+
+		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime3(),
+				config.getArrival1(), config.getDatetime4());
+
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+
+			LOG.info(mapper.writeValueAsString(response));
+		} catch (IOException e) {
+			LOG.info(response.toString());
+		}
+
+		Assert.assertTrue(response.size() == 2);
+	}
+
+	@Before
+	public void setup() {
+
+		mockServer = MockRestServiceServer.createServer(restTemplate);
+
+		// all the mock requests must be done at next order,
+		// otherwise, the test will fail
+		readJsonFile(config.getRoutesFilePath(), config.getRoutesEndpoint());
+		readJsonFile(config.getScheduledFlights_MAD_IBZ(), config.getScheduledFlightsEndpoint_MAD_IBZ());
+		readJsonFile(config.getScheduledFlights_MAD_MAN(), config.getScheduledFlightsEndpoint_MAD_MAN());
+		readJsonFile(config.getScheduledFlights_MAN_IBZ(), config.getScheduledFlightsEndpoint_MAN_IBZ());
+		readJsonFile(config.getScheduledFlights_MAD_MRS(), config.getScheduledFlightsEndpoint_MAD_MRS());
+		readJsonFile(config.getScheduledFlights_MRS_IBZ(), config.getScheduledFlightsEndpoint_MRS_IBZ());
+	}
+
+	private void readJsonFile(String filePath, String endpoint) {
+
+		try (BufferedReader br = new BufferedReader(new FileReader(getFileFromResources(filePath)))) {
+			String jsonRoutes = readAllLinesWithStream(br);
+
+			mockServer.expect(ExpectedCount.once(), requestTo(new URI(endpoint))).andExpect(method(HttpMethod.GET))
+					.andRespond(withStatus(HttpStatus.OK).contentType(MediaType.APPLICATION_JSON).body(jsonRoutes));
+
+		} catch (FileNotFoundException e) {
 			Assert.fail(String.format("File %s not found", filePath));
 		} catch (IOException e) {
 			Assert.fail(String.format("File %s not correctly formatted", filePath));
 		} catch (URISyntaxException e) {
 			Assert.fail(String.format("Url %s not correctly formatted", endpoint));
 		}
-    }
-    
-    private String readAllLinesWithStream(BufferedReader reader) {
-        return reader.lines()
-          .collect(Collectors.joining(System.lineSeparator()));
-    }
-    
-    // get file from classpath, resources folder
-    private File getFileFromResources(String fileName) {
+	}
 
-        ClassLoader classLoader = getClass().getClassLoader();
+	private String readAllLinesWithStream(BufferedReader reader) {
+		return reader.lines().collect(Collectors.joining(System.lineSeparator()));
+	}
 
-        URL resource = classLoader.getResource(fileName);
-        if (resource == null) {
-            throw new IllegalArgumentException("file is not found!");
-        } else {
-            return new File(resource.getFile());
-        }
+	// get file from classpath, resources folder
+	private File getFileFromResources(String fileName) {
 
-    }
+		ClassLoader classLoader = getClass().getClassLoader();
+
+		URL resource = classLoader.getResource(fileName);
+		if (resource == null) {
+			throw new IllegalArgumentException("file is not found!");
+		} else {
+			return new File(resource.getFile());
+		}
+
+	}
 
 }
