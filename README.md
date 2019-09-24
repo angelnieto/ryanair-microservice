@@ -4,4 +4,4 @@
 
 ##### This microservice can be tested through the Swagger User Interface  available at : http://localhost:8080/flights once the service has been deployed.
 
-##### The microservice is built as a jar archive that can be found at 
+##### The microservice can be built as a bootable .jar archive that can be found at /build/libs directory
