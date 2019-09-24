@@ -19,8 +19,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
@@ -31,8 +29,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import es.rmc.config.TestSettings;
 import es.rmc.exception.FlightsException;
@@ -53,8 +49,6 @@ public class MainTest2 {
 	@Autowired
 	private TestSettings config;
 
-	private static Logger LOG = LoggerFactory.getLogger(MainTest2.class);
-
 	private MockRestServiceServer mockServer;
 
 	/** Test for getting direct flights and interconnections
@@ -66,14 +60,6 @@ public class MainTest2 {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime7(),
 				config.getArrival1(), config.getDatetime8());
-
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-
-			LOG.info(mapper.writeValueAsString(response));
-		} catch (IOException e) {
-			LOG.info(response.toString());
-		}
 
 		Assert.assertTrue(response.size() == 2);
 	}

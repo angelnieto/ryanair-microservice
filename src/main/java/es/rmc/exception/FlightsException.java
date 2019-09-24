@@ -1,7 +1,5 @@
 package es.rmc.exception;
 
-import java.util.function.Consumer;
-
 /**  
  * Custom microservice exception
  * 
@@ -52,41 +50,5 @@ public class FlightsException extends Exception {
 				return message;
 			}
 		}
-	 
-	// =========================================== Methods =========================================
-//	 static <T, E extends Exception> Consumer<T>
-//	  consumerWrapper(Consumer<T> consumer, Class<E> clazz) {
-//	  
-//	    return i -> {
-//	        try {
-//	            consumer.accept(i);
-//	        } catch (Exception ex) {
-//	            try {
-//	                E exCast = clazz.cast(ex);
-//	                System.err.println(
-//	                  "Exception occured : " + exCast.getMessage());
-//	            } catch (ClassCastException ccEx) {
-//	                throw ex;
-//	            }
-//	        }
-//	    };
-//	}
-	 
-//	 @FunctionalInterface
-//	 public interface ThrowingConsumer<T, E extends FlightsException> {
-//	     void accept(T t) throws E;
-//	 }
-//	 
-//	 public static <T> Consumer<T> throwingConsumerWrapper(
-//			  ThrowingConsumer<T, FlightsException> throwingConsumer) {
-//			  
-//			    return i -> {
-//			        try {
-//			            throwingConsumer.accept(i);
-//			        } catch (FlightsException ex) {
-//			            throw new RuntimeException(ex);
-//			        }
-//			    };
-//			}
 }
 

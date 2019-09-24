@@ -46,6 +46,12 @@ public class TestSettings {
 
 	@NotNull
 	private LocalDateTime datetime8;
+	
+	@NotNull
+	private LocalDateTime datetime9;
+
+	@NotNull
+	private LocalDateTime datetime10;
 
 	@NotNull
 	private String routesEndpoint;
@@ -194,6 +200,22 @@ public class TestSettings {
 		this.datetime8 = parseToLocalDateTime(datetime);
 	}
 
+	public LocalDateTime getDatetime9() {
+		return datetime9;
+	}
+
+	public void setDatetime9(String datetime) {
+		this.datetime9 = parseToLocalDateTime(datetime);
+	}
+	
+	public LocalDateTime getDatetime10() {
+		return datetime10;
+	}
+
+	public void setDatetime10(String datetime) {
+		this.datetime10 = parseToLocalDateTime(datetime);
+	}
+	
 	public String getRoutesEndpoint() {
 		return routesEndpoint;
 	}

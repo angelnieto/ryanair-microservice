@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -54,7 +55,7 @@ public class MainTest1 {
 	 * 
 	 * @throws FlightsException
 	 */
-	// @Test
+	@Test
 	public void testDirectFlight() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime1(),
@@ -68,7 +69,7 @@ public class MainTest1 {
 	 * 
 	 * @throws FlightsException
 	 */
-	// @Test
+	@Test
 	public void testInterconnection() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime3(),
@@ -82,13 +83,28 @@ public class MainTest1 {
 	 * 
 	 * @throws FlightsException
 	 */
-	//@Test
+	@Test
 	public void testNoFlights() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime5(),
 				config.getArrival1(), config.getDatetime6());
 
 		Assert.assertTrue(response.size() == 0);
+	}
+	
+	/** Test for getting overlapped flights
+	 * 
+	 * @throws FlightsException
+	 */
+	@Test
+	public void testOverlappedFlights() throws FlightsException {
+
+		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime9(),
+				config.getArrival1(), config.getDatetime10());
+
+		Assert.assertTrue(response.size() == 1);
+		Assert.assertTrue(response.get(0).getStops() == 1);
+		Assert.assertTrue(response.get(0).getLegs().size() == 3);
 	}
 
 	/**

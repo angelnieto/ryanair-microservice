@@ -23,7 +23,6 @@ import org.springframework.web.client.RestTemplate;
 
 import es.rmc.config.FlightsServiceConfig;
 import es.rmc.exception.FlightsException;
-import es.rmc.exception.ThrowingConsumer;
 import es.rmc.model.Flight;
 import es.rmc.model.FlightsMatched;
 import es.rmc.model.FlightsMatched.Leg;
@@ -81,12 +80,10 @@ public class FlightsServiceImpl implements FlightsService {
 		List<Route> routesList = new ArrayList<>();
 		Collections.addAll(routesList, routes); 
 		
-		//search for direct fligths
+		// 1. search for direct fligths
 		List<Route> directRoutes = findDirectRoutes( routesList, departure, arrival);
 		
-		//search for interconnected fligths
-		List<Route> interconnectedRoutes = findInterconnections(routesList, departure, arrival);
-
+		//only one Route can be direct between 2 airports
 		if(directRoutes.size() == 1) {
 			List<ScheduledFlights> scheduledDirectFligths = findScheduledDirectFligths(directRoutes, departureDatetime, arrivalDatetime);
 			
@@ -100,6 +97,10 @@ public class FlightsServiceImpl implements FlightsService {
 			}
 		
 		}
+		
+		// 2. search for interconnected fligths
+		List<Route> interconnectedRoutes = findInterconnections(routesList, departure, arrival);
+		
 		if(!interconnectedRoutes.isEmpty()) {
 			List<ScheduledFlights> scheduledIndirectFligths = findScheduledIndirectFligths(interconnectedRoutes, departureDatetime, arrivalDatetime);
 		
@@ -117,18 +118,18 @@ public class FlightsServiceImpl implements FlightsService {
 				
 		return response;
 	}
-
+	
+	/** filter all scheduled indirect flights that met prerequisites */
 	private Set<Flight> getValidInterconnections(String departure, LocalDateTime departureDatetime,
 			LocalDateTime arrivalDatetime, List<ScheduledFlights> scheduledIndirectFligths) {
 		Set<Flight> validFlights = new HashSet<>(); 
 		
 		Set<Flight> validScheduledFlights = new HashSet<>(); 
 		
-		//1 : checks if flight datatimes fulfill request datatimes 
+		//1 : checks if flight datatimes met request datatimes 
 		scheduledIndirectFligths.forEach(sif ->
 			sif.getFlightDays().forEach(fd -> 
 				fd.getFlights().forEach(f -> {
-					//checks if flight datatimes fulfill request datatimes 
 					if(!f.getDepartureDatetime().isBefore(departureDatetime) && !f.getArrivalDatetime().isAfter(arrivalDatetime)) {
 						validScheduledFlights.add(f);
 					}
@@ -157,6 +158,7 @@ public class FlightsServiceImpl implements FlightsService {
 		return validFlights;
 	}
 
+	/** filter all scheduled direct flights that met prerequisites */
 	private Set<Flight> getValidDirectFlights(LocalDateTime departureDatetime, LocalDateTime arrivalDatetime,
 			List<ScheduledFlights> scheduledDirectFligths) {
 		Set<Flight> validFlights = new HashSet<>(); 
@@ -164,7 +166,7 @@ public class FlightsServiceImpl implements FlightsService {
 		scheduledDirectFligths.forEach(sdf ->
 			sdf.getFlightDays().forEach(fd -> 
 				fd.getFlights().forEach(f -> {
-					//checks if flight datatimes fulfill request datatimes 
+					//checks if flight datatimes met request datatimes 
 					if(!f.getDepartureDatetime().isBefore(departureDatetime) && !f.getArrivalDatetime().isAfter(arrivalDatetime)) {
 						validFlights.add(f);
 					}
@@ -173,45 +175,42 @@ public class FlightsServiceImpl implements FlightsService {
 		);
 		return validFlights;
 	}
-
+	
+	/** searchs for scheduled indirect flights at the given time interval */
 	private List<ScheduledFlights> findScheduledIndirectFligths(List<Route> interconnectedRoutes,
 			LocalDateTime departureDatetime, LocalDateTime arrivalDatetime){
 		
 		List<ScheduledFlights> scheduledIndirectFligths = new ArrayList<>();
 		
-//		final ThrowingConsumer<String> throwingConsumer = aps -> {
-//			scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, departureDatetime.getYear(), departureDatetime.getMonthValue()));
-//			
-//			//if arrival date is for next month
-//			if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
-//				scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
-//			}
-//			
-//		    throw new Exception("asdas");
-//		};
-		
 		interconnectedRoutes.forEach(
-				(ThrowingConsumer<Route>) indirectRoute -> {
-			
-					scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, departureDatetime.getYear(), departureDatetime.getMonthValue()));
+				 indirectRoute -> {
+					addScheduledFlights(indirectRoute, departureDatetime, scheduledIndirectFligths);
 				
 					//if arrival date is for next month
 					if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
-						scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
+						addScheduledFlights(indirectRoute, arrivalDatetime, scheduledIndirectFligths);
 					}
 				});
 		return scheduledIndirectFligths;
 	}
 
+	private void addScheduledFlights(Route route, LocalDateTime datetime, List<ScheduledFlights> scheduledFligths) {
+		ScheduledFlights scheduled = getScheduledFlights(route, datetime.getYear(), datetime.getMonthValue());
+		if(scheduled != null) {
+			scheduledFligths.add(scheduled);
+		}
+	}
+
+	/** searchs for scheduled direct flights at the given time interval */
 	private List<ScheduledFlights> findScheduledDirectFligths(List<Route> directRoutes,
 			LocalDateTime departureDatetime, LocalDateTime arrivalDatetime) throws FlightsException {
 		
 		List<ScheduledFlights> scheduledDirectFligths = new ArrayList<>();
 		
-		scheduledDirectFligths.add(getScheduledFlights(directRoutes.get(0), departureDatetime.getYear(), departureDatetime.getMonthValue()));
+		addScheduledFlights(directRoutes.get(0), departureDatetime, scheduledDirectFligths);
 		//if arrival date is for next month
 		if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
-			scheduledDirectFligths.add(getScheduledFlights(directRoutes.get(0), arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
+			addScheduledFlights(directRoutes.get(0), arrivalDatetime, scheduledDirectFligths);
 		}
 		return scheduledDirectFligths;
 	}
@@ -221,6 +220,7 @@ public class FlightsServiceImpl implements FlightsService {
 	}
 
 	private List<Route> findInterconnections(List<Route> validRoutes, String departure, String arrival) {
+		
 		List<Route> validDepartureRoutes = validRoutes.stream().filter(r -> departure.equalsIgnoreCase(r.getOriginAirport())).collect(Collectors.toList());
 		List<Route> validArrivalRoutes = validRoutes.stream().filter(r -> arrival.equalsIgnoreCase(r.getDestinationAirport())).collect(Collectors.toList());
 		
@@ -238,6 +238,7 @@ public class FlightsServiceImpl implements FlightsService {
 		return interconnectedRoutes;
 	}
 	
+	/** creates an object for the response List<FlightsMatched> */
 	private FlightsMatched createFlightsMatched(int stops, Set<Flight> flights) {
 		FlightsMatched fm = new FlightsMatched();
 		
@@ -273,7 +274,14 @@ public class FlightsServiceImpl implements FlightsService {
 	    return response;
 	}
 	
-	private ScheduledFlights getScheduledFlights(Route route, int year, int month) throws FlightsException {
+	/** recovers only the routes from 'Ryanair' operator and that its connectinAirport property is null */
+	private Route[] filterRoutes(ResponseEntity<Route[]> responseEntity) {
+		List<Route> routesFiltered = Arrays.asList(responseEntity.getBody()).stream().filter(route -> config.getOperator().equalsIgnoreCase(route.getOperator()) && route.getConnectingAirport() == null).collect(Collectors.toList());
+		
+		return routesFiltered.toArray(new Route[routesFiltered.size()]);
+	}
+	
+	private ScheduledFlights getScheduledFlights(Route route, int year, int month) {
 		ScheduledFlights response = null;
 		
 		//replace url params for its values
@@ -301,8 +309,7 @@ public class FlightsServiceImpl implements FlightsService {
 			    
 			}
 	    } catch (Exception e) {
-	    	LOG.error("Exception trying to connect with Ryanair schedules endpoint: {}", e.getMessage());
-//	    	throw new FlightsException(FlightsException.FlightsExceptionType.COMMUNICATION_ERROR);
+	    	LOG.error("Exception trying to connect with Ryanair schedules endpoint: {}", scheduledFlightsUrl);
 	    }
 		
 	    return response;
@@ -328,12 +335,6 @@ public class FlightsServiceImpl implements FlightsService {
 		return sb.append(Integer.toString(day)).toString();
 	}
 	
-	private Route[] filterRoutes(ResponseEntity<Route[]> responseEntity) {
-		List<Route> routesFiltered = Arrays.asList(responseEntity.getBody()).stream().filter(route -> config.getOperator().equalsIgnoreCase(route.getOperator()) && route.getConnectingAirport() == null).collect(Collectors.toList());
-		
-		return routesFiltered.toArray(new Route[routesFiltered.size()]);
-	}
-
 	private HttpEntity<HttpHeaders> getHttpRequest() {
 		HttpHeaders requestHeaders = new HttpHeaders();
         requestHeaders.add("Accept", MediaType.APPLICATION_JSON_VALUE); 

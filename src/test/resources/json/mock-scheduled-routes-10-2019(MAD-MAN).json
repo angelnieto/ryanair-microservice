@@ -30,7 +30,7 @@
 					"arrivalTime": "13:00"
 				},
 				{
-					"number": "1926",
+					"number": "1929",
 					"departureTime": "22:00",
 					"arrivalTime": "02:35"
 				}
@@ -65,7 +65,7 @@
 					"arrivalTime": "13:00"
 				},
 				{
-					"number": "1926",
+					"number": "1929",
 					"departureTime": "22:00",
 					"arrivalTime": "02:35"
 				}
@@ -86,8 +86,13 @@
 			"flights": [
 				{
 					"number": "1926",
-					"departureTime": "15:25",
-					"arrivalTime": "19:00"
+					"departureTime": "11:00",
+					"arrivalTime": "13:35"
+				},
+				{
+					"number": "1929",
+					"departureTime": "18:25",
+					"arrivalTime": "22:00"
 				}
 			]
 		},
@@ -100,7 +105,7 @@
 					"arrivalTime": "13:00"
 				},
 				{
-					"number": "1926",
+					"number": "1929",
 					"departureTime": "22:00",
 					"arrivalTime": "02:35"
 				}
@@ -135,7 +140,7 @@
 					"arrivalTime": "13:00"
 				},
 				{
-					"number": "1926",
+					"number": "1929",
 					"departureTime": "22:00",
 					"arrivalTime": "02:35"
 				}
@@ -170,7 +175,7 @@
 					"arrivalTime": "13:00"
 				},
 				{
-					"number": "1926",
+					"number": "1929",
 					"departureTime": "22:00",
 					"arrivalTime": "02:35"
 				}
