@@ -16,6 +16,7 @@ public class Route implements Serializable{
 
 	private static final long serialVersionUID = -1893336294674637252L;
 
+	// =========================================== Fields =========================================
 	// JSON properties
 	private String originAirport;
 	private String destinationAirport;

@@ -1,23 +1,20 @@
 package es.rmc.utils;
 
-import org.springframework.http.MediaType;
+import es.rmc.model.FlightsMatched;
 
 public class Constants {
 	
+		/** Swagger TAGS
+		 * 
+		 */
 	  public static class TAGS
       {
           public static final String FLIGHTS = "FLIGHTS";
       }
 	  
-	  public static class API{
-
-	        /* DEFAULT VALUES */
-	        /**
-	         * Default {@link MediaType}
-	         */
-	        public static final String DEFAULT_MEDIA = MediaType.APPLICATION_JSON_VALUE;
-	  }
-	  
+	  /** {@link FlightsMatched#stop} values
+	   * 
+	   */
 	  public static class STOP
       {
           public static final int ZERO = 0;

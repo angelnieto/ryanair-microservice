@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import es.rmc.model.FlightsMatched;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -21,7 +22,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/** This class is used to set the neccesary Swagger configuration for the project
+/** This class is used to set the necessary Swagger configuration for testing the microservice
  * 
  * @author rmc */
 @Configuration
@@ -34,6 +35,10 @@ public class Swagger2Config {
     /** The base package to scan by swagger */
     private final String BASEPACKAGE = "es.rmc.controller";
 
+    /** Swagger builder creation
+     * 
+     * @return {@link Docket} builder object 
+     */
     @Bean
     public Docket api() {
 	
@@ -56,6 +61,7 @@ public class Swagger2Config {
 
     }
 
+    /** Returns creator information at Swagger User Interface main page */
     private ApiInfo apiInfo() {
 	
 		return new ApiInfoBuilder().title("Ryanair microservice Rest API")

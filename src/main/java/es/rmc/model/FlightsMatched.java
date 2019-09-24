@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 
 /**
- * Object that maps responses created by Ryanair microservice 
+ * Object that maps responses obtained from Ryanair microservice 
  *
  * @author rmc
  *
@@ -151,8 +151,7 @@ public class FlightsMatched implements Serializable{
 	
 	public class SortByDepartureDatetime implements Comparator<Leg> 
 	{ 
-	    // Used for sorting in ascending order of 
-	    // roll number 
+	    // Used for sorting in ascending order of departure datetime 
 	    public int compare(Leg a, Leg b) 
 	    { 
 	    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm").withZone(ZoneId.of("UTC"));

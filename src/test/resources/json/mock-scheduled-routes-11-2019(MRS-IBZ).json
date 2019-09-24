@@ -1,4 +1,15 @@
 {
 	"month": 11,
-	"days": []
+	"days": [
+		{
+			"day": 1,
+			"flights": [
+				{
+					"number": "1926",
+					"departureTime": "03:00",
+					"arrivalTime": "07:35"
+				}
+			]
+		}
+	]
 }

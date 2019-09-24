@@ -15,10 +15,13 @@ public class Flight implements Serializable{
 
 	private static final long serialVersionUID = -2378754017125516877L;
 
+	// =========================================== Fields =========================================
+	
 	// JSON properties
 	private Integer number;
 	private String departureTime;
 	private String arrivalTime;
+	
 	// Internal properties
 	private String originAirport;
 	private String destinationAirport;
@@ -126,6 +129,14 @@ public class Flight implements Serializable{
 		builder.append(departureTime);
 		builder.append(", arrivalTime=");
 		builder.append(arrivalTime);
+		builder.append(", originAirport=");
+		builder.append(originAirport);
+		builder.append(", destinationAirport=");
+		builder.append(destinationAirport);
+		builder.append(", departureDatetime=");
+		builder.append(departureDatetime);
+		builder.append(", arrivalDatetime=");
+		builder.append(arrivalDatetime);
 		builder.append("]");
 		return builder.toString();
     }

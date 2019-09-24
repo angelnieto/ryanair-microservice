@@ -57,7 +57,10 @@ public class MainTest2 {
 
 	private MockRestServiceServer mockServer;
 
-	
+	/** Test for getting direct flights and interconnections
+	 * 
+	 * @throws FlightsException
+	 */
 	@Test
 	public void testDirectAndInterconnectedFlights() throws FlightsException {
 
@@ -75,6 +78,9 @@ public class MainTest2 {
 		Assert.assertTrue(response.size() == 2);
 	}
 
+	/**
+	 * Mocks GET requests
+	 */
 	@Before
 	public void setup() {
 

@@ -14,6 +14,8 @@ public class FlightsAtDay implements Serializable{
 
 	private static final long serialVersionUID = -8966317557993604523L;
 
+	// =========================================== Fields =========================================
+	
 	// JSON properties
 	private Integer day;
 	private List<Flight> flights;

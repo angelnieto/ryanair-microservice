@@ -17,10 +17,7 @@ import java.util.stream.Collectors;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
@@ -31,8 +28,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import es.rmc.config.TestSettings;
 import es.rmc.exception.FlightsException;
@@ -53,63 +48,52 @@ public class MainTest1 {
 	@Autowired
 	private TestSettings config;
 
-	private static Logger LOG = LoggerFactory.getLogger(MainTest1.class);
-
 	private MockRestServiceServer mockServer;
 
+	/** Test for getting one only direct flight
+	 * 
+	 * @throws FlightsException
+	 */
 	// @Test
 	public void testDirectFlight() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime1(),
 				config.getArrival1(), config.getDatetime2());
 
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-
-			LOG.info(mapper.writeValueAsString(response));
-		} catch (IOException e) {
-			LOG.info(response.toString());
-		}
-
 		Assert.assertTrue(response.size() == 1);
 		Assert.assertTrue(response.get(0).getStops() == 0);
 	}
 
+	/** Test for getting one only interconnection
+	 * 
+	 * @throws FlightsException
+	 */
 	// @Test
 	public void testInterconnection() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime3(),
 				config.getArrival1(), config.getDatetime4());
 
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-
-			LOG.info(mapper.writeValueAsString(response));
-		} catch (IOException e) {
-			LOG.info(response.toString());
-		}
-
 		Assert.assertTrue(response.size() == 1);
 		Assert.assertTrue(response.get(0).getStops() == 1);
 	}
 
+	/** Test for getting no flights
+	 * 
+	 * @throws FlightsException
+	 */
 	//@Test
 	public void testNoFlights() throws FlightsException {
 
 		List<FlightsMatched> response = flightsService.getFlights(config.getDeparture1(), config.getDatetime5(),
 				config.getArrival1(), config.getDatetime6());
 
-		try {
-			ObjectMapper mapper = new ObjectMapper();
-
-			LOG.info(mapper.writeValueAsString(response));
-		} catch (IOException e) {
-			LOG.info(response.toString());
-		}
-
 		Assert.assertTrue(response.size() == 0);
 	}
 
+	/**
+	 * Mocks GET requests
+	 */
 	@Before
 	public void setup() {
 

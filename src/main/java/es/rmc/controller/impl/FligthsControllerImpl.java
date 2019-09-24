@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import es.rmc.controller.FlightsController;
 import es.rmc.exception.FlightsException;
+import es.rmc.exception.FlightsException.FlightsExceptionType;
 import es.rmc.model.FlightsMatched;
 import es.rmc.service.FlightsService;
 
@@ -38,7 +39,12 @@ public class FligthsControllerImpl implements FlightsController{
 		} catch (FlightsException e) {
 			FlightsMatched item = new FlightsMatched(e.getException().getMessage()); 
 			response.add(item);
-			status = HttpStatus.PRECONDITION_FAILED;
+			if(FlightsExceptionType.COMMUNICATION_ERROR.equals(e.getException())) {
+				status = HttpStatus.FAILED_DEPENDENCY;
+			} else {
+				status = HttpStatus.PRECONDITION_FAILED;
+			}
+			
 		}
 		return new ResponseEntity<>(response, status);
 	}

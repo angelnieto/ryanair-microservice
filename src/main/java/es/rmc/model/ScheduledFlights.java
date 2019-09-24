@@ -15,7 +15,8 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 public class ScheduledFlights implements Serializable{
 
 	private static final long serialVersionUID = 2693444226572531664L;
-
+	
+	// =========================================== Fields =========================================
 	// JSON properties
 	private Integer month;
 	private List<FlightsAtDay> flightDays;

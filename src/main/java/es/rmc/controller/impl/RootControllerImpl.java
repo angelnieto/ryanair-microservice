@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import es.rmc.controller.RootController;
 import springfox.documentation.annotations.ApiIgnore;
 
-/** Default home (root) controller (redirect to swagger api docs)
- * 
- * @author rmc */
 @Controller
 @ApiIgnore
 public class RootControllerImpl implements RootController{
