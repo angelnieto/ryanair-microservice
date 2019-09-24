@@ -23,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 
 import es.rmc.config.FlightsServiceConfig;
 import es.rmc.exception.FlightsException;
+import es.rmc.exception.ThrowingConsumer;
 import es.rmc.model.Flight;
 import es.rmc.model.FlightsMatched;
 import es.rmc.model.FlightsMatched.Leg;
@@ -178,8 +179,19 @@ public class FlightsServiceImpl implements FlightsService {
 		
 		List<ScheduledFlights> scheduledIndirectFligths = new ArrayList<>();
 		
+//		final ThrowingConsumer<String> throwingConsumer = aps -> {
+//			scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, departureDatetime.getYear(), departureDatetime.getMonthValue()));
+//			
+//			//if arrival date is for next month
+//			if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
+//				scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
+//			}
+//			
+//		    throw new Exception("asdas");
+//		};
+		
 		interconnectedRoutes.forEach(
-				FlightsException.throwingConsumerWrapper(indirectRoute -> {
+				(ThrowingConsumer<Route>) indirectRoute -> {
 			
 					scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, departureDatetime.getYear(), departureDatetime.getMonthValue()));
 				
@@ -187,8 +199,7 @@ public class FlightsServiceImpl implements FlightsService {
 					if(arrivalDatetime.getMonthValue() != departureDatetime.getMonthValue()) {
 						scheduledIndirectFligths.add(getScheduledFlights(indirectRoute, arrivalDatetime.getYear(), arrivalDatetime.getMonthValue()));
 					}
-				})
-		);
+				});
 		return scheduledIndirectFligths;
 	}
 
@@ -291,7 +302,7 @@ public class FlightsServiceImpl implements FlightsService {
 			}
 	    } catch (Exception e) {
 	    	LOG.error("Exception trying to connect with Ryanair schedules endpoint: {}", e.getMessage());
-	    	throw new FlightsException(FlightsException.FlightsExceptionType.COMMUNICATION_ERROR);
+//	    	throw new FlightsException(FlightsException.FlightsExceptionType.COMMUNICATION_ERROR);
 	    }
 		
 	    return response;

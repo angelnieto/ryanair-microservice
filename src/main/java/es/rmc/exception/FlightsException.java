@@ -72,21 +72,21 @@ public class FlightsException extends Exception {
 //	    };
 //	}
 	 
-	 @FunctionalInterface
-	 public interface ThrowingConsumer<T, E extends FlightsException> {
-	     void accept(T t) throws E;
-	 }
-	 
-	 public static <T> Consumer<T> throwingConsumerWrapper(
-			  ThrowingConsumer<T, FlightsException> throwingConsumer) {
-			  
-			    return i -> {
-			        try {
-			            throwingConsumer.accept(i);
-			        } catch (FlightsException ex) {
-			            throw new RuntimeException(ex);
-			        }
-			    };
-			}
+//	 @FunctionalInterface
+//	 public interface ThrowingConsumer<T, E extends FlightsException> {
+//	     void accept(T t) throws E;
+//	 }
+//	 
+//	 public static <T> Consumer<T> throwingConsumerWrapper(
+//			  ThrowingConsumer<T, FlightsException> throwingConsumer) {
+//			  
+//			    return i -> {
+//			        try {
+//			            throwingConsumer.accept(i);
+//			        } catch (FlightsException ex) {
+//			            throw new RuntimeException(ex);
+//			        }
+//			    };
+//			}
 }
 
