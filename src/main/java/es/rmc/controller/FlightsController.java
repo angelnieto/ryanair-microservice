@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
+import es.rmc.config.Swagger2Config.TAGS;
 import es.rmc.model.FlightsMatched;
-import es.rmc.utils.Constants.TAGS;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

@@ -40,8 +40,10 @@ public class FligthsControllerImpl implements FlightsController{
 			FlightsMatched item = new FlightsMatched(e.getException().getMessage()); 
 			response.add(item);
 			if(FlightsExceptionType.COMMUNICATION_ERROR.equals(e.getException())) {
+				//Third party server not found
 				status = HttpStatus.FAILED_DEPENDENCY;
 			} else {
+				//Request parameters don't mets prerequisites
 				status = HttpStatus.PRECONDITION_FAILED;
 			}
 			

@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 
+import org.springframework.lang.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -25,7 +27,7 @@ public class FlightsMatched implements Serializable{
 
 	// JSON properties
 	@JsonInclude(Include.NON_NULL)
-	private Integer stops;
+	private Stop stops;
 	
 	@JsonInclude(Include.NON_NULL)
 	private List<Leg> legs;
@@ -46,11 +48,17 @@ public class FlightsMatched implements Serializable{
 	// =========================================== Getters and setters =========================================
 
 		public Integer getStops() {
-			return stops;
+			Integer stopsIntValue = null;
+			
+			//stops == null when an exception is thrown
+			if(this.stops != null) {
+				stopsIntValue = stops.getValue();
+			}
+			return stopsIntValue;
 		}
 
 
-		public void setStops(Integer stops) {
+		public void setStops(Stop stops) {
 			this.stops = stops;
 		}
 
@@ -87,7 +95,34 @@ public class FlightsMatched implements Serializable{
 			return builder.toString();
 	    }
 
+	    
+	 /** Enum for stops values */   
+	 public enum Stop {
+			  ZERO(0),
+			  ONE(1);
+		 
+		 	private Integer value;
+			  
+		  // =========================================== Constructors =========================================
+
+		    private Stop(Integer value) {
+			   this.value = value;
+		    }
+		    
+		    // =========================================== Getters and setters =========================================
+		    public Integer getValue() {
+				return this.value;
+			}
+		    
+		    public void setValue(Integer value) {
+				this.value = value;
+			}
+		    		    
+	}
 	
+	 
+	 
+	 /** Class for leg objects */ 
 	public class Leg implements Serializable {
 		
 		private static final long serialVersionUID = -15775660502978437L;
@@ -149,6 +184,7 @@ public class FlightsMatched implements Serializable{
 			
 	}
 	
+	// =========================================== Methods =========================================
 	public class SortByDepartureDatetime implements Comparator<Leg> 
 	{ 
 	    // Used for sorting in ascending order of departure datetime 

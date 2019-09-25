@@ -26,10 +26,10 @@ import es.rmc.exception.FlightsException;
 import es.rmc.model.Flight;
 import es.rmc.model.FlightsMatched;
 import es.rmc.model.FlightsMatched.Leg;
+import es.rmc.model.FlightsMatched.Stop;
 import es.rmc.model.Route;
 import es.rmc.model.ScheduledFlights;
 import es.rmc.service.FlightsService;
-import es.rmc.utils.Constants;
 
 @Service
 public class FlightsServiceImpl implements FlightsService {
@@ -42,7 +42,7 @@ public class FlightsServiceImpl implements FlightsService {
         this.config = config;
     }
 	 
-	 @Autowired 
+     @Autowired 
 	 RestTemplate restTemplate;
 	 
 	 private static Logger LOG = LoggerFactory.getLogger(FlightsServiceImpl.class);
@@ -73,7 +73,7 @@ public class FlightsServiceImpl implements FlightsService {
 	}
 
 	private List<FlightsMatched> findValidScheduledFlights(String departure, LocalDateTime departureDatetime, String arrival,
-			LocalDateTime arrivalDatetime, Route[] routes) throws FlightsException {
+			LocalDateTime arrivalDatetime, Route[] routes) {
 		
 		List<FlightsMatched> response = new ArrayList<>();
 		
@@ -92,7 +92,7 @@ public class FlightsServiceImpl implements FlightsService {
 				Set<Flight> validFlights = getValidDirectFlights(departureDatetime, arrivalDatetime, scheduledDirectFligths); 
 				
 				if(!validFlights.isEmpty()) {
-					response.add(createFlightsMatched(Constants.STOP.ZERO, validFlights));
+					response.add(createFlightsMatched(FlightsMatched.Stop.ZERO, validFlights));
 				}
 			}
 		
@@ -110,7 +110,7 @@ public class FlightsServiceImpl implements FlightsService {
 						scheduledIndirectFligths);
 				
 				if(!validFlights.isEmpty()) {
-					response.add(createFlightsMatched(Constants.STOP.ONE, validFlights));
+					response.add(createFlightsMatched(FlightsMatched.Stop.ONE, validFlights));
 				}
 				
 			}
@@ -203,7 +203,7 @@ public class FlightsServiceImpl implements FlightsService {
 
 	/** searchs for scheduled direct flights at the given time interval */
 	private List<ScheduledFlights> findScheduledDirectFligths(List<Route> directRoutes,
-			LocalDateTime departureDatetime, LocalDateTime arrivalDatetime) throws FlightsException {
+			LocalDateTime departureDatetime, LocalDateTime arrivalDatetime) {
 		
 		List<ScheduledFlights> scheduledDirectFligths = new ArrayList<>();
 		
@@ -239,7 +239,7 @@ public class FlightsServiceImpl implements FlightsService {
 	}
 	
 	/** creates an object for the response List<FlightsMatched> */
-	private FlightsMatched createFlightsMatched(int stops, Set<Flight> flights) {
+	private FlightsMatched createFlightsMatched(Stop stops, Set<Flight> flights) {
 		FlightsMatched fm = new FlightsMatched();
 		
 		List<Leg> legs = new ArrayList<>();

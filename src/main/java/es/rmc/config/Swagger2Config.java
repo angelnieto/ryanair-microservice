@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import es.rmc.model.FlightsMatched;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -30,10 +29,19 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config {
 
     @Value("${swagger.enabled}")
-    private String swaggerEnabled;
+    private String enabled;
 
     /** The base package to scan by swagger */
-    private final String BASEPACKAGE = "es.rmc.controller";
+    @Value("${swagger.basePackage}")
+    private String basePackage;
+    
+	/** Swagger TAGS
+	 * 
+	 */
+	  public static class TAGS
+	  {
+	      public static final String FLIGHTS = "FLIGHTS";
+	  }
 
     /** Swagger builder creation
      * 
@@ -55,7 +63,7 @@ public class Swagger2Config {
 		List<ResponseMessage> getResponses = new ArrayList<>();
 		getResponses.add(new ResponseMessageBuilder().code(HttpStatus.UNSUPPORTED_MEDIA_TYPE.value()).message("Media Type not supported at GET requests").build());
 
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage(BASEPACKAGE)).paths(PathSelectors.any()).build().pathMapping("/").apiInfo(apiInfo())
+		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage(basePackage)).paths(PathSelectors.any()).build().pathMapping("/").apiInfo(apiInfo())
 		.useDefaultResponseMessages(false).globalResponseMessage(RequestMethod.GET, ListUtils.sum(commonResponses, getResponses))
 		.globalResponseMessage(RequestMethod.POST, ListUtils.sum(commonResponses, postResponses)).enable(getEnabled());
 
@@ -75,7 +83,7 @@ public class Swagger2Config {
 
     /** Returns if swagger api is enabled. Reads <code>swagger.enabled</code> value from properties */
     private boolean getEnabled() {
-	return Boolean.parseBoolean(swaggerEnabled);
+	return Boolean.parseBoolean(enabled);
     }
 
 }
